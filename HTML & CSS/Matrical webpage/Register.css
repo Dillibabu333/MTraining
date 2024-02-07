@@ -1,0 +1,50 @@
+#parent{
+    width: 450px;
+    height: auto;   
+    padding: 20px 40px 10px 40px;
+    margin: auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+h2{
+    padding-left: 100px;
+}
+
+form{
+    padding: 10px 10px 10px 10px;
+}
+
+.inp{
+    width: 350px;
+    height: 30px;
+    color: black;
+    border:none;
+    background-color: rgb(231, 229, 229);
+    border-radius: 6px;
+    padding: 5px;
+}
+
+button{
+    width: 250px;
+    height: 30px;
+    color: white;
+    background-color:#1a59a7;
+    border: none;
+    border-radius: 9px;
+    padding: 5px;
+    font: 1em sans-serif;
+    margin-left: 70px;
+}
+
+#login{
+    font-size:small;
+    font-family: sans-serif;
+    padding-top: 5px;
+    margin-left: 70px;
+
+}
+
+a{
+    text-decoration: none;
+    color: blue;
+}

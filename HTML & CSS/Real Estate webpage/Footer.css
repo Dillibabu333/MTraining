@@ -1,0 +1,148 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  #footer{
+    background-color:rgb(78, 80, 78);
+    width: 100%;
+  }
+#container {
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  width: 70%;
+  margin:auto;
+height: auto;
+padding: 1% 0;
+  
+}
+.box{
+  width: 50%;
+  padding: 2%;
+} 
+
+.box p{
+    word-spacing: 2px;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 60px;
+    text-align: justify;
+
+  }
+
+.img{
+  display: flex;
+  width:100%;
+  justify-content: space-around;
+}
+.img>img:first-child{
+  width: 50%;
+}
+.img>img:last-child{
+  width: 30%;
+}
+
+.box2{
+  width: 25%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.box3{
+  width: 25%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.r{
+  color: white;
+  text-decoration: none;
+}
+
+.r:hover{
+  color: red;
+}
+.s{
+  color: white;
+  text-decoration: none;
+}
+.s:hover{
+  color: red;
+}
+.fa-brands{
+  font-size: 50px;
+  color:blue;
+}
+.fa-twitter{
+  font-size: 35px;
+  color:aqua ;
+}
+.fa-linkedin-in{
+  font-size: 30px;
+  color:rgb(0, 174, 255) ;
+
+}
+.fonts{ 
+  padding: 0 20px;
+
+}
+.fa-android{
+    font-size: 20px;
+   color: white;
+  }
+.fa-apple{
+  font-size: 20px;
+   color: white;
+
+  }
+ .fonts2 i{
+  padding: 0 10px;
+ }
+
+.fonts2  i:hover{
+  padding: 0 10px;
+  color: red;
+  cursor: pointer;
+  
+ }
+ .fonts2{
+  padding-top: 20px;
+ }
+
+
+ 
+/* medium screens */
+@media screen and (min-width:500px)and (max-width:800px) {
+   
+  #container{
+    flex-direction: column;
+  }
+  .box, .box2, .box3{
+    width: 100%;
+    text-align: center;
+    padding: 4% 0;
+  }
+  
+  .img>img{
+    width: 80%;
+  }
+}
+
+
+
+/* small screens */
+@media (max-width:500px){
+    #container{
+      flex-direction: column;
+    }
+    .box, .box2, .box3{
+      width: 100%;
+      text-align: center;
+      padding: 4% 0;
+    }
+    
+    .img>img{
+      width: 80%;
+    }
+  }

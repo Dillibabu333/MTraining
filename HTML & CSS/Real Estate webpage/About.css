@@ -1,0 +1,426 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* section */
+section{
+    width: 100%;
+}
+/* about */
+#about{
+    display: flex; 
+    margin-top:5%;
+    align-items: center;
+    width: 100%;
+}
+#about>div:first-child{
+    padding: 0 1% 0 5%;
+    width: 50%;
+}
+#about>div:first-child>h2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:40px ;
+    color: #CE3132;
+    font-weight: 400;
+    padding-bottom: 1%;
+}
+#about>div:first-child>p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6rem;
+    font-size: 16px;
+    text-align: justify;
+    color:#444444;
+    padding: 1% 0;
+    
+}
+#about>div:first-child>h4{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:20px ;
+    color: #CE3132;
+    font-weight: 400;
+    padding-bottom: 1%;
+}
+
+#about>div:last-child{
+    width: 50%;
+    padding-right: 2%;
+}
+#about>div:last-child>img{
+width: 100%;
+}
+
+/* banner */
+section>#banner{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    text-align: center;
+    padding: 3% 0;
+}
+#banner>img{
+    width: 80%;
+    height: 3%;
+
+}
+
+
+
+/* speadjoy */
+#spreadjoy{
+    display: flex; 
+    margin-top:2%;
+    width: 100%;
+}
+#spreadjoy>div:first-child{
+        padding: 3% 1% 0 5%;
+        width: 50%;
+    
+}
+#spreadjoy>div:first-child>h2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:40px ;
+    color: #CE3132;
+    font-weight: 400;
+    width: 50%;
+}
+#spreadjoy>div:first-child>p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6rem;
+    font-size: 16px;
+    color:#444444;
+}
+#spreadjoy>div:last-child{
+    width: 50%;
+    padding-right: 2%;
+}
+#spreadjoy>div:last-child>img{
+    width: 100%;
+}
+
+/* team */
+#team{
+    background-color: #EDF2F0;
+    width: 70%;
+    margin: 3% auto;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+
+}
+.teamslide{
+    display: flex;
+    width:calc(100% * 7);
+    position: relative;
+    transition: all .5s ease;
+    animation: slide 50s infinite; 
+}
+.teamslide:hover{
+    animation-play-state: paused;
+}
+@keyframes slide{
+  0%{
+    transform: translateX(0%);
+  }
+  14.2%{
+    transform: translateX(-14.28%);
+  }
+  28.56%{
+    transform: translateX(-28.56%);
+  }
+  42.84%{
+    transform: translateX(-42.84%);
+  }
+  57.12%{
+    transform: translateX(-57.12%);
+  }
+  71.4%{
+    transform: translateX(-71.4%);
+  }
+  85.68%{
+    transform: translateX(-85.68%);
+  }
+  
+  100%{
+    transform: translateX(0%);
+
+  }
+}
+.teamslide>div{
+    width:100%;
+    height:auto;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2% 1%;
+
+}
+
+.cont{
+    display: inline;
+    width: 50%;
+}
+.cont>div>h2{
+    color: #EF3D37;
+    font-size: 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+.cont>div>img{
+    width: 35%;
+    /* height: 35%; */
+}
+.cont>div>h4{
+    color: #EF3D37;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    font-weight: 500;
+}
+.cont>div>h6{
+    color: #EF3D37;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    font-weight: 500;
+}
+.cont>div>p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6rem;
+    font-size: 16px;
+    color:#444444;
+    padding: 1% 0;
+    text-align: justify;
+    
+}
+.teamslide>div>div:last-child{
+    width: 40%;
+    height: auto;
+}
+.teamslide>div>div:last-child>img{
+    width: 100%;
+}
+
+
+
+/* rea */
+#rea{
+    display: flex; 
+    margin-top:2%;
+    width: 100%;
+}
+#rea>div:first-child{
+    width: 50%;
+    padding: 0 1% 0 5%;
+
+
+}
+#rea>div:first-child>h2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:40px ;
+    color: #CE3132;
+    font-weight: 400;
+}
+#rea>div:first-child>p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.9rem;
+    font-size: 16px;
+    color:#444444;
+    padding: 1% 0;
+    text-align: justify;
+
+}
+#rea>div:first-child>p>span{
+    color: #E8362F;
+}
+#rea>div:last-child{
+    width: 50%;
+    padding-right: 2%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#rea>div:last-child>img{
+    width: 40%;
+}
+
+/* findus */
+#findus{
+    width: 100%;
+    padding: 3% 0;
+}
+#findus>h2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:40px ;
+    color: #CE3132;
+    font-weight: 400;
+    text-align: center;
+    padding: 2% 0;
+}
+.map{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.map>div:first-child{
+    width: 60%;
+    height:auto;
+}
+.map>div:first-child>iframe{
+    width: 100%;
+    height: 60vh;
+    border-radius: 10px;
+}
+.map>div:last-child{
+    text-align: center;
+    padding: 3% 2%;
+}
+.map>div:last-child>h5{
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    
+}
+.map>div:last-child>address{
+    width: 60%;
+    margin: auto;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    line-height: 1.6rem;
+    padding: 6% 0;
+}
+
+
+
+/* medium screens */
+@media screen and (min-width:500px)and (max-width:800px) {
+ 
+    #about>div:first-child{
+        width: 100%;
+    }
+    #about>div:first-child>p{
+        text-align: justify;
+    }
+    #spreadjoy{
+        align-items: center;
+    }
+    #spreadjoy>div:first-child>h2{
+        font-size: 30px;
+        width: 100%;
+    }
+    #spreadjoy>div:first-child>p{
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    #team{
+        width: 80%;
+    }
+    .teamslide>div{
+        flex-direction: column;
+        justify-content:space-around;
+        padding: 0 1%;
+    }
+    .cont{
+        width: 100%;
+    }
+    .cont>div>p{
+        padding: 0;
+    }
+
+    .teamslide>div>div:last-child{
+        width: 80%;
+    }
+
+   #rea{
+    flex-direction: column;
+   }
+   #rea>div:first-child{
+    width: 100%;
+   }
+   #rea>div:last-child{
+    width: 100%;
+   }
+
+
+}
+
+
+/* small screens */
+@media (max-width:500px){
+
+    #about>div:first-child{
+        width: 100%;
+    }
+    #about>div:first-child>p{
+        text-align: justify;
+    }
+    #about>div:last-child>img, #about>div:last-child
+        {
+        display: none;
+    }
+
+    #spreadjoy{
+        align-items: center;
+        flex-direction: column;
+    }
+    #spreadjoy>div:first-child, #spreadjoy>div:last-child
+        {
+        width: 100%;
+        padding: 3%;
+    }
+    #spreadjoy>div:first-child>h2{
+        font-size: 30px;
+        width: 100%;
+    }
+    #spreadjoy>div:first-child>p{
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    #team{
+        width: 80%;
+    }
+    .teamslide>div{
+        flex-direction: column;
+        justify-content:space-around;
+        padding: 0 1%;
+    }
+    .cont{
+        width: 100%;
+    }
+    .cont>div>p{
+        padding: 0;
+    }
+
+    .teamslide>div>div:last-child{
+        width: 80%;
+    }
+
+   #rea{
+    flex-direction: column;
+   }
+   #rea>div:first-child{
+    width: 100%;
+   }
+   #rea>div:last-child{
+    width: 100%;
+   }
+   .map{
+    flex-direction: column;
+   }
+   .map>div:first-child, .map>div:last-child>address
+    {
+    width: 100%;
+    padding: 2%;
+   }
+   .map>div:first-child>iframe{
+    height: 40vh;
+   }
+
+
+}
+   

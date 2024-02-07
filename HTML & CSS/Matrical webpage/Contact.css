@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+article {
+  width: 100%;
+  height: 50vh;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwNY-M8uhz2_bGouFXYeyK7J65xq4si1j39Q&usqp=CAU);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+article > div {
+  color: white;
+  padding-top: 37vh;
+  text-align: center;
+}
+article > div > h4 {
+  font-size: 20px;
+  font-weight: 100;
+  font-family: sans-serif;
+}
+article > div > h1 {
+  font-size: 50px;
+  font-weight: 100;
+  font-family: sans-serif;
+}
+
+/* section styling */
+section {
+  width: 100%;
+  height: auto;
+  margin-top: 5vh;
+}
+
+section div {
+  display: flex;
+  justify-content: center;
+}
+/* left */
+.left {
+  width: 20%;
+  height: 70vh;
+  display: inline-block;
+}
+.left > h3 {
+  color: black;
+  font-size: 28px;
+  font-family: sans-serif;
+  margin: 12px 0px 20px 0px;
+}
+.left > h3 span {
+  color: #1a59a7;
+}
+section div > .left > .first {
+  font-size: 14px;
+  font-family: sans-serif;
+  color: black;
+}
+.left > .first > h5 {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+.left > .first > p {
+  font-size: 14px;
+  font-family: sans-serif;
+  margin-bottom: 6px;
+}
+
+.left > .last > h5 {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding: 20px 0px 10px 0px;
+}
+.left > .last > p > a {
+  text-decoration: none;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: black;
+}
+
+/* right */
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 50%;
+  margin-left: 50px;
+}
+.right > div > h2 {
+  color: black;
+  font-size: 38px;
+  font-family: sans-serif;
+  margin: 12px 0px 30px 0px;
+}
+.right > div > h2 > span {
+  color: #1a59a7;
+}
+
+.right > div > input {
+  width: 700px;
+  height: 45px;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: black;
+  margin: 10px 0px 10px 10px;
+  padding: 12px 4px 6px 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.right > div > textarea {
+  width: 700px;
+  height: 100px;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: black;
+  margin: 20px 0px 20px 10px;
+  padding: 12px 4px 30px 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.right > div > button {
+  margin: 10px 0px 21px 10px;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: #1a59a7;
+}
+
+/* medium screen */
+@media (max-width: 768px) {
+  article {
+    width: 100%;
+  }
+  article > div {
+    color: white;
+    padding-top: 21vh;
+    text-align: center;
+  }
+  article > div > h4 {
+    font-size: 20px;
+    font-weight: 100;
+    font-family: sans-serif;
+  }
+  article > div > h1 {
+    font-size: 40px;
+    font-weight: 100;
+    font-family: sans-serif;
+  }
+
+  section > div {
+    display: block;
+    margin-top: -100px;
+  }
+
+  .left > h3 {
+    width: 768px;
+    text-align: center;
+    margin: auto;
+  }
+  .left > .first,
+  .last {
+    width: 550px;
+    margin: 20px 100px;
+    padding: 10px 50px;
+  }
+  .right {
+    display: inline;
+    margin: auto;
+    text-align: start;
+  }
+
+  .right > div > input {
+    width: 550px;
+    height: 45px;
+  }
+  .right > div > textarea {
+    width: 550px;
+    height: 100px;
+  }
+  div > iframe {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+/* small screen */
+@media (max-width: 426px) {
+  article {
+    width: 100%;
+  }
+  article > div {
+    color: white;
+    padding-top: 10vh;
+    text-align: center;
+  }
+  article > div > h4 {
+    font-size: 14px;
+    font-weight: 100;
+    font-family: sans-serif;
+  }
+  article > div > h1 {
+    font-size: 25px;
+    font-weight: 100;
+    font-family: sans-serif;
+  }
+  section > div {
+    display: block;
+    margin-top: -180px;
+  }
+
+  .left > h3,
+  .right > div > h2 {
+    width: 420px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .left > .first,
+  .last {
+    width: 340px;
+    margin: 10px 40px;
+    padding: 10px 20px;
+  }
+  .right {
+    display: inline;
+    margin: auto;
+    text-align: start;
+  }
+  .right > div > input {
+    width: 320px;
+  }
+  .right > div > textarea {
+    width: 320px;
+  }
+  .right > div > button {
+    margin: 6px 0px 21px 10px;
+    width: 80px;
+    height: 40px;
+  }
+}

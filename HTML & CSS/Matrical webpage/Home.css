@@ -1,0 +1,23 @@
+article>div>img{
+    margin-top: 10px;
+}
+
+section>div>h1{
+    padding-top: 50px;
+    width: 970px;
+    height: auto;
+    margin: auto;
+    font-size: 32px;
+}
+ 
+section>div>h1>span{
+    color: #1a59a7;
+}
+
+section>div>p{
+    width: 80%;
+    margin: auto;
+    font-size: 18px;
+    font-family: 'pappins' sans-serif;
+    font-weight: 100;   
+}

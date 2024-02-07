@@ -1,0 +1,241 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .container{
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    justify-content: space-around;
+}
+.content{
+    height: 200px;
+}
+*{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.in{
+  padding-left: 10%;
+}
+.perent{
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: #292929;
+    padding: 80px;
+    padding-left: 15px;
+}
+
+
+  
+.news{
+  background-color: rgb(218, 226, 226);
+  padding: 50px;
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-around;  
+
+}
+.text{
+  display: flex;
+  justify-content: space-between;
+  padding:30px;
+}
+.pseudo h2{
+  /* padding: 300px; */
+  /* display: flex; */
+  /* padding-right: 50px; */
+  margin: 12px 0 20px;
+  font-size: 27px;
+  font-weight: 700;
+  /* padding-bottom:200px; */
+}
+.pseudo p{
+  text-align: justify;
+  margin: 55px 0 20px;
+  font-size: 25px;
+  
+}
+.home{
+  
+  padding:40px;
+  padding-bottom:30px;
+  
+  
+}
+.cat{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 100px;
+  padding-bottom: 50px;
+  
+
+}
+  .pseudo button{
+    height: 50px;
+    width: 320px;
+    border: none;
+    border-radius: 25px;
+    background-color: red;
+    color: white;
+    /* padding: px; */
+    font-size: 20px;
+    align-items: center;
+
+  }
+  .pseudo{
+    padding-bottom:30px;
+
+  }
+
+
+.newtext{
+  /* text-align: center; */
+  margin-bottom: 20px;
+    /* font-size: 25px; */
+    /* font-weight: 700; */
+    line-height: normal;
+    color: #292929;
+    padding-left:150px;
+}
+  .newtext p{
+    text-align: justify;
+    font-size: 18px;
+    line-height: 26px;
+    color: #666;
+    padding-top: 20px;
+  }
+  .main{
+    display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 100px;
+  /* padding-bottom:100%; */
+  /* margin-bottom: 600px; */
+    
+
+  }
+  
+.blacktxt{
+  color: black;
+  font-size: 40px;
+    line-height:1rem ; 
+   
+
+
+}  
+.redtxt{
+  color: red;
+  font-size: 35px;
+  
+
+}
+.joy{
+  padding-left:150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 100px;
+  
+}
+.joy2 h3{
+ font-size: 45px;
+ font-weight: light;
+ padding: 4px;
+
+}
+  .joy p{
+    
+    font-size: 20px;
+  }
+  .joy2 span{
+    font-size: 45px;
+    font-weight: light;
+    padding: 4px;
+  }
+  .sri h2{
+    font-size:35px ;
+     font-weight: light;
+     
+  
+  }
+  .sri p{
+    font-size: 15px;
+  }
+.sri span{
+  color: red;
+  font-size:35px ;
+     font-weight: light;
+}
+.sri{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  text-align: left;
+}
+.ss img{
+height: 105px;
+width: 105px;
+}
+.sri2{
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
+  
+}
+.pp{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top:120px ;
+}
+.phonetext{
+align-items: center;
+display: flex;
+flex-direction: column;
+
+}
+.phonetext h2{
+  text-align: left;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 25px 
+    
+}
+.phonetext p{
+   font-size: 16px;
+    line-height: 1.2;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+  .btt button{
+    height: 50px;
+    width: 280px;
+    border-radius: 30px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  }
+  .phone img{
+height: auto;
+width: auto;
+padding-left: 220px;
+
+  }
+  .maintt{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #dfdddd;
+    padding-top:70px;
+  }

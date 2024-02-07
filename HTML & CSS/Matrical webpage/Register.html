@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="Navbar.css"/>
+    <link rel="stylesheet" href="Register.css">
+    <script src="https://kit.fontawesome.com/7c2a2f47c8.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav>
+        <div id="logo">
+            <a href="home.html"><img src="https://www.matrical.in/assets/media/general/Logo-MATR.png" alt="logo" width="150px" height="150px"> </a>       
+         </div>
+
+        <div id="content">
+          <ul id="menu">
+            <li><a href="Home.html">HOME</a></li>
+            <li><a href="About.html">ABOUT</a></li>
+            <li><a href="Register.html">SERVICES <i class="fa-solid fa-angle-down"></i></a>
+              <ul id="submenu">
+                <li><a href="">IT Services <i class="fa-solid fa-angle-down"></i></a>
+                  <ul id="submenu1">
+                    <li><a href="">Web Applications</a></li>
+                    <li><a href="">Mobile Applications</a></li>
+                    <li><a href="">Data Analytics</a></li>
+                    <li><a href="">AI & ML Services</a></li>
+                  </ul>
+                </li>
+                <li><a href="">Engineering Services <i class="fa-solid fa-angle-down"></i></a></li>
+                <li><a href="">Other Services <i class="fa-solid fa-angle-down"></i></a></li>
+              </ul>
+            </li>
+            <li><a href="Contact.html">CONTACT</a></li>
+            <li><a href="Register.html">REGISTER</a></li>
+            <li><a href="Login.html">LOGIN</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    <img src="" alt="">
+    <div id="parent">
+        <h2>Create  an Account</h2>
+        <div>
+            <form action="">
+                <label for="">First Name*</label><br>
+                <input class="inp" type="text" placeholder="first name" required>
+                <br><br>
+                <label for="">Last Name</label><br>
+                <input class="inp" type="text" placeholder="last name" >
+                <br><br>
+                <label for="">Phone*</label>
+                <input class="inp" type="number" placeholder="phone number" required>
+                <label for="">Email*</label><br>
+                <input class="inp" type="email" placeholder="email" required>
+                <br><br>
+                <label for="">Date of Birth*</label><br>
+                <input class="inp" type="date" required >
+                <br><br>
+                <label for="gender">Gender*</label><br>
+                <input type="radio" name="gender" required><label >Male</label>
+                <input type="radio" name="gender" required><label >Female</label>
+                <input type="radio" name="gender" required><label >Others</label>
+                <br><br>
+                <label for="">Password*</label><br>
+                <input class="inp" type="password" placeholder="password" required>
+                <br><br>
+                <label for="">Adress*</label><br>
+                <input class="inp" class="inp" type="text" placeholder="permanent address" required>
+                <br><br>
+                <label for="">Pincode*</label><br>
+                <input class="inp" type="number" placeholder="pincode" required>
+                <br><br>
+                <button type="submit">Register</button>
+
+                <div id="login">
+                    <span>Already have an account ?</span>
+                    <a href="Login.html">Login here</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
