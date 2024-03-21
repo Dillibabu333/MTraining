@@ -1,30 +1,48 @@
-<!-- On Click & On Hover -->
-<!DOCTYPE html>
+<!-- onClick , mouseEnter, mouseLeave-->
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        button{
+            color: white;
+            padding: 1%;
+            border: none;
+            font-size: 15px;
+            background-color: gray;
+        }
+    </style>
 </head>
-<body>
+<body>  
     <h1>Welcome to Matrical</h1>
     <button onclick="change()">Change Text</button>
 
     <script>
         var text=document.querySelector("h1");
         var btn=document.querySelector("button");
-        btn.addEventListener("click",change());
-        btn.addEventListener("mouseover", over())
+        btn.addEventListener("click",change);    
+        btn.addEventListener("mouseenter", hover);
+        btn.addEventListener("mouseleave", ()=>{
+            btn.style.backgroundColor="wheat";
+        });
+        
         function change(){
+            
             text.textContent="Bye"
         }
-        function over(){
+        function hover(){
             btn.style.backgroundColor="teal";
+           
         }
+    
     </script>
 </body>
 </html>
+ 
 
 
 
-<!--  -->
+
+<!-- on load -->

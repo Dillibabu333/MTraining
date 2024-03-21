@@ -7,11 +7,14 @@
     <style>
         div{
             width: 20%;
+            height: auto;
             background-color: teal;
-            margin:10% auto ;
+            margin:auto ;
+            color: white ;
             text-align: center;
-            
-        }
+            padding: 10px;
+            }
+        
     </style>
 </head>
 <body>
@@ -20,22 +23,39 @@
         <form action="">
         <label for="mail">Email</label>
         <br>
-        <input type="email" placeholder="Enter email">
+        <input type="email" id="mail" placeholder="Enter email" name="">
         <br><br>
         <label for="pswd">Password</label>
         <br>
-        <input type="password" placeholder="Enter password" >
+        <input type="password" id="pswd" placeholder="Enter password" name="">
         <br><br>
         <button type="submit" style="width:90px;" id="btn">LOGIN</button>
         </form>
     </div>
 </body>
-<script>
-    
+<script>   
+    var btn=document.querySelector("#btn");
+    btn.addEventListener("click", submit);
 
-
-    var bt=document.querySelectorAll("btn");
-    
+    function submit(){
+        try{
+            let email=document.getElementById("mail").value;
+            console.log(email)
+        let password=document.getElementById("pswd").value;
+        console.log(password)
+        if(name == "" && password==""){
+            throw{name:"EmptyError",message:"please enter mail and password"};
+        }
+        else if(name !="asdf@gmail.com" && password !="1234"){
+            throw{name:"NameError", message:"Mail or password error"}
+        }
+        alert("Login Successfully!!!")
+        }
+        catch(e){
+            alert(e.message)
+        }
+    }
+   
 
 </script>
 </html>

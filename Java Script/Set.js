@@ -1,7 +1,7 @@
 
 const id=setInterval(() => {
-    console.log("Evvarrra meerantha")
+    console.log("Welcome to Matrical")
 
 }, 1000);
 
-setTimeout(()=>{console.log("entra idhi"); clearInterval(id)},5000)
+setTimeout(()=>{console.log("Good Bye"); clearInterval(id)},5000)

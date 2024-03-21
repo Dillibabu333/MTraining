@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock</title>
+  <style>
+    .clock {
+    font-size: 48px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="clock">
+    <h2>Digital Clock</h2>
+       <div id="time"></div>
+  </div>
+  <script>
+    function updateTime() {
+  let now = new Date();
+  var hours = now.getHours().toString().padStart(2, '0');
+  var minutes = now.getMinutes().toString().padStart(2, '0');
+  var seconds = now.getSeconds().toString().padStart(2, '0');
+  var timeString = hours+":"+minutes+":"+seconds;
+  document.getElementById('time').textContent = timeString;
+}
+
+// Update time every second
+setInterval(updateTime, 1000);
+
+// Initial call to display time immediately
+updateTime();
+
+  </script>
+  
+</body>
+</html>
