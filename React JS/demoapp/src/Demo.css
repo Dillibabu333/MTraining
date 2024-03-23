@@ -1,0 +1,14 @@
+.i1{
+    height: 5vh;
+    width: 40vh;
+    border: 1px solid green;
+}
+.b1{
+    display: block;
+    height: 4vh;
+    width: 10vh;
+    margin:3vh 10vh;
+    border: none;
+    color: white;
+    background-color: green;
+}
