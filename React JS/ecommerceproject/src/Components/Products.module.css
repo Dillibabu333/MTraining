@@ -1,0 +1,13 @@
+#mainproducts{
+    width: 100%;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(5,16%);
+    gap: 4%;
+    width: 70%;
+    margin: auto;
+    height: auto;
+    padding: 2% 0% 3% 2%;
+
+}

@@ -1,0 +1,26 @@
+#uparent{
+    position: absolute;
+    top: 5rem;
+    right: 4rem;
+    width: 16.5%;
+    padding: 1%;
+    border-radius: 6%;
+    background-color: #efefef;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;    
+}
+.username{
+    font-family: sans-serif;
+    padding: 3% 0%;
+}
+.mail{
+    padding-bottom: 3%;
+}
+ .logout{
+    text-decoration: none;
+    color: black;
+    font-weight: 550;
+    margin: auto;
+    display: block;
+    width: 25%;
+    font-size: large;
+ }

@@ -1,0 +1,56 @@
+#parent{
+    width: 400px;
+    height: auto;   
+    padding: 20px 40px 10px 40px;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+h2{
+    padding-left: 100px;
+}
+
+.form{
+    padding: 10px 10px 10px 10px;
+}
+
+.inp{
+    width: 300px;
+    height: 30px;
+    color: black;
+    border:none;
+    background-color:#E8F0FE;
+    border-radius: 6px;
+    padding: 5px;
+    outline: none;
+}
+
+.btn{
+    width: 70%;
+    height: 30px;
+    color: white;
+    background-color:#1a59a7;
+    border: none;
+    border-radius: 9px;
+    padding: 5px;
+    font: 1em sans-serif;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+#login{
+    font-size:small;
+    font-family: sans-serif;
+    padding-top: 5px;
+    margin-left: 45px;
+
+}
+.sp{
+    color: black;
+}
+
+.link{
+    text-decoration: none;
+    color: blue;
+}

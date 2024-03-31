@@ -1,14 +1,18 @@
-import Demo from './Demo';
 import { BrowserRouter as Router ,Routes , Route} from 'react-router-dom';
-import About from './About';
+import Register from './Components/Register';
+import Login from './Components/Login';
+import Home from './Components/Home';
+import Navbar from './Components/Navbar';
 
 function App() {
   return (
   <div>
+   <Navbar/>
     <Router>
       <Routes>
-        <Route path='/' element={<Demo/>} />
-        <Route path='about' element={<About/>} />
+        <Route path='/' element={<Login/>} />
+        <Route path='/register' element={<Register/>}/>
+        <Route path='/home' element={<Home/>}/>
       </Routes>
     </Router>
   </div>

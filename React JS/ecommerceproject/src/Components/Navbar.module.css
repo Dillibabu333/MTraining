@@ -1,0 +1,42 @@
+#parent{
+    background-color: #efefef;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .logo{
+    width: 20%;
+  }
+.menu{
+  width: 40%;
+}
+  .menu>ul{
+    width: 100%;
+    list-style-type: none;
+    font-size: large;
+    font-style: normal;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+   
+  }
+  .menu>ul>li{
+    padding: 0 5%;
+  }
+  .menu>ul>li>.link{
+    padding: 5%;
+    text-decoration:none;
+    color: black;
+    font-weight: 550;
+  }
+
+  .user{
+    width: 15%;
+    cursor: pointer;
+
+    }
+
+
+ 

@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  #bgrimg {
+    width: 100%;
+    height: 50vh;
+    /* background-image: url(assets/media/components/b-title-page/bg-5.jpg); */
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwNY-M8uhz2_bGouFXYeyK7J65xq4si1j39Q&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+    padding-top: 37vh;
+    text-align: center;
+  }
+  
+  #bgrimg > h4 {
+    font-size: 20px;
+    font-weight: 100;
+    font-family: sans-serif;
+  }
+  #bgrimg > h1 {
+    font-size: 50px;
+    font-weight: 100;
+    font-family: sans-serif;
+  }
+  
+  /* section */
+  /* about */
+  section {
+    width: 100%;
+    height: auto;
+    padding: 50px 90px;
+  }
+  #about {
+    width: 90%;
+    margin: auto;
+    height: 100%;
+  }
+  /* top */
+  #about > .top {
+    text-align: center;
+    color: #333333;
+  }
+  #about > .top > h1 {
+    font-size: 36px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    padding: 18px 0px;
+  }
+  span {
+    color: #1a59a7;
+  }
+  #about > .top > p {
+    text-align: left;
+    line-height: 25px;
+    font-size: 14px;
+    padding-bottom: 6px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      text-align: justify;
+  }
+  
+  /* middle */
+  .middle {
+    display: flex;
+    padding-top: 20px;
+  }
+  .middle > div:first-child {
+    width: 483px;
+    height: 283px;
+    padding: 0px 15px;
+  }
+  .middle > div:first-child > img {
+    width: 457px;
+    height: 283px;
+  }
+  .middle > div:last-child {
+    width: 682px;
+    height: auto;
+    padding: 0px 15px;
+  }
+  .middle > div:last-child > p {
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    width: 600px;
+    margin: 6px 20px;
+    line-height: 25px;
+    padding: 0px 10px;
+    color: #333333;
+    text-align: justify;
+  }
+  .middle > div:last-child > p:last-child {
+    margin-top: 46px;
+  }
+  
+  /* bottom */
+  .bottom {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 40px;
+    height: 140px;
+  }
+  .bottom > div:first-child {
+    padding-right: 30px;
+    width: 50%;
+  }
+  .bottom > div:first-child > ul > li {
+    border-right: 1px solid gray;
+  }
+  
+  .bottom > div > h3 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  .bottom > div > ul > li {
+    line-height: 25px;
+    color: #333333;
+    font-size: 14px;
+    text-align-last: left;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  .bottom > div > ul > li > i {
+    color: #1a59a7;
+    padding-right: 10px;
+  }
+  ul {
+    list-style-type: none;
+    color: #333333;
+  }
+  
+  .bottom > div:last-child {
+    width: 40%;
+    padding-left: 30px;
+  }
+  
+  /* article */
+  article {
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  #arti {
+    margin: auto;
+    width: 80%;
+    height: auto;
+  }
+  #arti > h3 {
+    text-align: center;
+    font-size: 24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    padding: 20px 20px;
+    color: #333333;
+  }
+  #arti > .above {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+  }
+  #arti > .below {
+    display: flex;
+    width: 75.5%;
+    justify-content: space-between;
+  }
+  #arti > div > div {
+    padding: 10px 30px;
+  }
+  #arti > div > div > h4 {
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #333333;
+  }
+  #arti > div > div > ul {
+    line-height: 30px;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #333333;
+  }
+  #arti > div > div > ul > li > i {
+    color: #1a59a7;
+    padding-right: 10px;
+  }
+  
+  
+  
+  /* medium screen */
+  @media (max-width: 768px) {
+    #bgrimg {
+      width: 100%;
+      padding-top: 21vh;
+    }
+    #bgrimg > h4 {
+      font-size: 20px;
+    }
+    #bgrimg > h1 {
+      font-size: 40px;
+    }
+    /* section */
+    /* about */
+    section {
+      width: 100%;
+      padding: 20px 10px;
+      margin-top: -120px;
+    }
+  
+    /* top */
+    #about > .top {
+      text-align: start;
+      color: #333333;
+    }
+    #about > .top > h1 {
+      text-align: center;
+    }
+  
+    #about > .top > p {
+      text-align: center;
+      padding-bottom: 6px;
+    }
+  
+    /* middle */
+  
+    .middle > div:first-child {
+      width: 250px;
+      height: 250px;
+      padding: 0px;
+      margin-top: 10px;
+    }
+    .middle > div:first-child > img {
+      width: 250px;
+      height: 300px;
+    }
+    .middle > div:last-child {
+      width: 450px;
+      padding: 0px;
+    }
+    .middle > div:last-child > p {
+      width: 450px;
+      margin: 0px 10px;
+      padding: 0px 10px;
+    }
+    .middle > div:last-child > p:last-child {
+      margin-top: 20px;
+    }
+  
+    /* bottom */
+  
+    .bottom > div:first-child {
+      padding-right: 10px;
+    }
+    .bottom > div:last-child {
+      width: 50%;
+      padding-left: 10px;
+    }
+  
+    /* article */
+    article {
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+    #arti {
+      width: 100%;
+    }
+    #arti > .above {
+      margin-left: 60px;
+    }
+    #arti > .below {
+       margin-left: 60px;
+       width: 79%;
+    }
+  }
+  
+  /* small screen */
+  @media (max-width:426px) {
+      #bgrimg {
+          width: 100%;
+          padding-top: 10vh;
+        }
+        #bgrimg > h4 {
+          font-size: 14px;
+      }
+        #bgrimg > h1 {
+          font-size: 25px;
+        }
+      
+        
+  /* section */
+  /* about */
+  section {
+      padding: 0px 0px;
+      margin-top: -200px;
+    }
+    #about {
+      width: 90%;
+      margin: auto;
+      height: auto;
+    }
+    /* top */
+  
+    #about > .top > h1 {
+      font-size: 30px;
+      text-align: center;
+      padding: 18px 0px;
+    }
+    span {
+      color: #1a59a7;
+    }
+    #about > .top > p {
+      text-align: left;
+      font-size: 12px;
+      line-height: 20px;
+      padding-bottom: 6px;
+    }
+    
+    /* middle */
+    .middle {
+      display: flex;
+      flex-direction: column;
+    }
+    .middle > div:first-child {
+      width: 380px;
+      height: 300px;
+      padding: 0px 1px;
+    }
+    .middle > div:first-child > img {
+      width: 380px;
+      height: 300px;
+    }
+    .middle > div:last-child {
+      width: 400px;
+      height: auto;
+      padding: 0px px;
+    }
+    .middle > div:last-child > p {
+      font-size: 12px;
+      width: 400px;
+      margin: 6px 0px;
+      line-height: 20px;
+      padding: 0px 0px;
+    }
+    .middle > div:last-child > p:last-child {
+      margin-top: 20px;
+    }
+    
+    /* bottom */
+    .bottom {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      height: auto;
+    }
+    .bottom > div:first-child {
+      padding-right: 0px;
+      width: 100%;
+    }
+  
+    .bottom > div:first-child > ul > li {
+      border: none;
+    }
+    
+    .bottom > div > h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .bottom > div > ul > li {
+      line-height: 20px;
+      font-size: 12px;
+      text-align-last: left;
+  
+    } 
+    .bottom > div:last-child {
+      width: 100%;
+      padding-left: 0px;
+    }
+        
+    
+  /* article */
+  article {
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+    #arti > .above {
+      display: flex;
+      width: 88%;
+      justify-content:space-between;
+      margin-left: 20px;
+    }
+    #arti > .below {
+      display: flex;
+      width: 87%;
+      justify-content: space-between;
+      margin-left: 20px;
+    }
+    #arti > div > div {
+      padding: 10px 0px;
+    }
+    #arti > div > div > h4 {
+      margin-bottom: 20px;
+      font-size: 14px;
+   
+    }
+    #arti > div > div > ul {
+      line-height: 20px;
+      font-size: 12px;
+     
+    }
+  
+  }
