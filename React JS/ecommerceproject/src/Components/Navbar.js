@@ -18,11 +18,11 @@ const Navbar = () => {
   return (
     <div id={style.parent}>
       <div className={style.logo}>
-        <img
+       <a href="/home"> <img
           src="https://i.pinimg.com/originals/82/c6/5b/82c65b9bb0a75026fc4c82a438b4cc9b.jpg"
           alt="logo"
           style={{ width: "70px", height: "70px" }}
-        />
+        /></a>
       </div>
 
       <div className={style.menu}>

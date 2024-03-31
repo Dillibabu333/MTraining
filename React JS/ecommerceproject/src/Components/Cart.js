@@ -2,10 +2,17 @@ import React from 'react'
 import Navbar from './Navbar'
 
 const Cart = () => {
+  const style={
+    color:"lightblack",
+    textAlign:"center",
+    padding:"3%",
+  }
   return (
     <div>
               <Navbar/>
-cart is empty
+      <h1 style={style}>Your Cart is Empty
+
+</h1>
     </div>
   )
 }
