@@ -1,10 +1,35 @@
 #mainproducts{
     width: 100%;
 }
+
+.searchInput_Container{
+    background-color: #e4e5e6;
+    width: 30%;
+    margin: auto;
+    padding: 0.5%;
+    margin-top: 2%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+#searchInput{
+    background-color:#e4e5e6 ;
+    width: 90%;
+    padding: 1%;
+    outline: none;
+    height: 100%;
+    border: none;
+    color: black;
+    font-size: medium;
+}
+
 .products{
     display: grid;
     grid-template-columns: repeat(5,16%);
-    gap: 4%;
+    gap: 10% 5%;
     width: 70%;
     margin: auto;
     height: auto;

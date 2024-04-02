@@ -7,6 +7,7 @@ const Home = () => {
     <div>
         <Navbar/>   
         
+        
         <h1 className={style.home}>Home Page...</h1>
         
     </div>
