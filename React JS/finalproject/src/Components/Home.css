@@ -1,0 +1,133 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+/* clothing_box */
+#cloth_for_men_women {
+  width: 100%;
+  margin: 3% auto;
+}
+#cloth_for_men_women > h1 {
+  font-family: sans-serif;
+  font-size: 32px;
+  color: #000000;
+  padding: 2% 5%;
+}
+
+.clothing_box {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4% 2%;
+  width: 90%;
+  margin: auto;
+  height: auto;
+}
+.clothing_box > .cloth_item {
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.cloth_item > .link {
+  text-decoration: none;
+}
+
+.cloth_item > .link > .cloth > img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.cloth > h3 {
+  color: #1d1d1d;
+  font-size: 16px;
+  font-family: sans-serif;
+  padding: 3%;
+  text-align: left;
+  margin: 2% 0;
+}
+.cloth > h4 {
+  color: #1d1d1d;
+  font-size: 16px;
+  font-family: sans-serif;
+  padding: 3%;
+  text-align: left;
+  font-weight: 400;
+}
+.cloth > h2 {
+  color: rgb(3, 94, 94);
+  font-size: 24px;
+  font-family: sans-serif;
+  padding: 4%;
+  text-align: left;
+  font-weight: 490;
+}
+
+.clothing_box > .cloth_item:hover,
+.accessories_box > .access_item:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px;
+
+}
+
+/* accessories box */
+#accessories_for_men_women {
+  width: 100%;
+  margin: 3% auto;
+}
+#accessories_for_men_women > h1 {
+  font-family: sans-serif;
+  font-size: 32px;
+  color: #000000;
+  padding: 2% 5%;
+}
+
+.accessories_box {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4% 2%;
+  width: 90%;
+  margin: auto;
+  height: auto;
+}
+.accessories_box > .access_item {
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.access_item > .link {
+  text-decoration: none;
+}
+
+.access_item > .link > .access > img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.access > h3 {
+  color: #1d1d1d;
+  font-size: 16px;
+  font-family: sans-serif;
+  padding: 3%;
+  text-align: left;
+  margin: 2% 0;
+}
+.access > h4 {
+  color: #1d1d1d;
+  font-size: 16px;
+  font-family: sans-serif;
+  padding: 3%;
+  text-align: left;
+  font-weight: 400;
+}
+.access > h2 {
+  color: rgb(3, 94, 94);
+  font-size: 24px;
+  font-family: sans-serif;
+  padding: 4%;
+  text-align: left;
+  font-weight: 490;
+}

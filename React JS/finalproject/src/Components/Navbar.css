@@ -1,0 +1,95 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+#nav {
+  background-color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width:100%;
+  padding: 1%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  top: 0;
+  position: sticky;
+}
+.logo {
+  width: 15%;
+}
+.logo > a {
+  text-decoration: none;
+  margin: auto;
+}
+.logo > a > h1 {
+  margin: auto;
+  font-size: 40px;
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #1D1D1D;
+}
+.logo > a > h1 > span {
+  font-weight: bolder;
+}
+
+#nav_cloth {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1%;
+}
+
+#nav_cloth > div > a {
+  text-decoration: none;
+  color: #1D1D1D;
+  font-weight: 550;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+#searchbar{
+    background-color: #F1F1F1;
+    width: 35%;
+    padding: 0.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    border-radius: 5px;
+}
+#searchbar>.input{
+    width: 85%;
+    padding: 1.2%;
+    font-size:14px;
+    background-color: #F1F1F1;
+    outline: none;
+    border: none;
+    color: #1D1D1D;
+    font-family: sans-serif;
+    font-weight: 550;
+
+}
+#search>.search{
+}
+
+
+#user {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  gap: 30%;
+  padding: 1%;
+}
+#user>a{
+    color: #1D1D1D;
+    text-decoration: none;
+}
+#user>a>.cart{
+    font-size: 150%;
+}
+#user>a>.profile{
+    font-size: 200%;
+}

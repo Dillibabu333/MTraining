@@ -1,0 +1,73 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+#clothProductDetails {
+  width: 100%;
+}
+
+.clothProduct {
+  width: 85%;
+  margin:6% auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1%;
+}
+
+.clothProductLeft{
+    width: 28%;
+}
+.clothProductLeft>img{
+width: 100%;
+border-radius: 10px;
+box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
+}
+
+.clothProductRight{
+    width: 70%;
+    padding: 3%;
+}
+.clothProductRight>h1{
+    font-family: sans-serif;
+    margin: 5% 0;
+    color: #000000;
+    font-size: 35px;
+}
+.clothProductRight>h4{
+    font-family: sans-serif;
+    margin: 5% 0;
+    color: #037A7A;
+}
+.clothProductRight>div:nth-child(3){
+    margin: 1% 0;
+    line-height: 240%;
+}
+.clothProductRight>div:nth-child(3)>h3{
+    font-family: sans-serif;
+    color: #000000;
+    margin: 1% 0%;
+}
+    .clothProductRight>div:nth-child(3)>p{
+        font-family: sans-serif;
+    color: #000000;
+    font-size: 15px;
+    text-align: left;
+    }
+.clothProductRight>div:last-child{
+    margin: 4% 0;
+}
+.clothProductRight>div:last-child>button{
+    width: 18%;
+    /* height: 5vh; */
+    padding: 1.5% 1%;
+    font-size: 20px;
+    font-family: sans-serif;
+    border: none;
+    border-radius: 7px;
+     color: #FFFFFF;
+     background-color: #037A7A;
+     cursor: pointer;
+}

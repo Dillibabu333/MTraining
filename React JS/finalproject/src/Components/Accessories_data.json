@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "image":"https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/9803247/2019/5/27/624dac60-4c42-4902-bba1-30a51cc7f43c1558948536543-Apple-Unisex-Smart-Watches-1441558948536225-1.jpg",
+      "name": "Unisex Silver-Toned Series 3 Smart Watch",
+      "brand": "Apple",
+      "desc": "Low And High Heart Rate Notifications. Emergency SOS. New Breathe Watch Faces. Automatic Workout Detection. New Yoga And Hiking Workouts. Advanced Features For Runners Like Cadence And Pace Alerts. New Head-To-Head Competitions. Activity Sharing With Friends. Personalized Coaching. Monthly Challenges And Achievement Awards. Walkie-Talkie, Make Phone Calls, And Send Messages. Listen To Apple Music And Apple Podcasts. Use Siri In All-New Ways. Silver Aluminum Case. Built-In GPS, GLONASS, Galileo, And QZSS. S3 With Dual-Core Processor. W2 Apple Wireless Chip. Barometric Altimeter Capacity 8GB. Optical Heart Sensor. 1 Year Manufacture Warranty",
+      "price": 31999
+    },
+    {
+      "id":2,
+      "image":"https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/productimage/2019/2/23/dc05b5e5-aa82-493e-bf0b-0c309baf21021550920383101-1.jpg",
+      "name": "Unisex Black & Green Reflex 2.0 Smart Band",
+      "brand": "Fastrack",
+      "desc": "The New Fastrack Reflex 2.0 Activity Tracker Comes With All The Features One Could Ask For! It Comes In Three Colours That You Can Use To Accentuate Your Athleisure, Casual Or Party Attire. Not Only Does It Look Uber Cool In This Cool Grey & Electric Blue Accent, Further The TPU (Thermoplastic Polyurethane) Strap Ensures It Gives You A Snugfit While Staying Light On Your Wrist! It Is A Fitness Band With Smartwatch Features. The Band Has Steps, Distance And Calorie Tracker, Sleep Tracker, Call & SMS Alerts, OLED Display, 10 Days Power Reserve, Vibration Alarm, Sedentary Reminder And Is IPX6 Water Resistant. This Band Is Compatible With Both IOS And Android OS. It Has A Secure 'Pin' Based Pairing With Your Phone, For Better Protection. And, All Of This At A Price That Is Hard Match Anywhere Else With Quality And Promise Of The Brand Fastrack. Move On And Get One For Yourself!",
+      "price": 1999
+    },
+    {
+      "id": 3,
+      "image":"https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/10122083/2019/6/24/e533a691-3908-41b0-8307-1928a37d4ec41561362162650-Samsung-Galaxy-Fit-4801561362161527-1.jpg",
+      "name": "Unisex Black Galaxy Fit Fitness Band",
+      "brand": "Samsung",
+      "desc": "Keep Up Your Routine For Even Longer. With Plenty Of Power To Last Throughout Your Daily Workouts, You Can Pack In Those Longer Hours To Reach Your Fitness Goals. What's More, You Won't Have To Worry About Disruptive Battery Discharge When Tracking Your Activity.",
+      "price": 9990
+    },
+    {
+      "id": 4,
+      "image":"https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/8593217/2019/4/9/de2c21f3-6731-4c29-9369-692a486a1b8c1554802772926-Samsung-Gear-IconX-Black-Cord-free-Fitness-Earbuds-256155480-1.jpg",
+      "name": "Gear IconX Black Cord-free Fitness Earbuds",
+      "brand": "Samsung",
+      "desc": "Speak Commands Via Bixby Or Google Voice And Control Your Music With Just A Tap Or Swipe. Meet Your Fitness Goals With Speed, Distance, Calorie Tracking And Real-Time Voice Guidance. Find The Perfect Fit With Multiple Sizes Of Ear-Tips And Wing-Tips Right In The Box. IOS/Mac Users: Samsung Gear IconX Can Be Used To Stream Music Or Take Calls From Your IOS Handset Or Tablet. Fitness Functions That Require The Use Of Samsung S-Health App Are Not Available For IOS. 5 Hours Of Bluetooth Streaming, 7 Hours Of MP3 Listening, 4 Hours Talk Time. Warranty: 6 Months. Warranty Provided By The Brand Owner / Manufacturer",
+      "price": 13990
+    },
+    {
+      "id": 5,
+      "image":"https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/9803279/2019/5/27/6661d579-12ae-456b-b8f2-e78e5256a99c1558948436173-Apple-AirPods-with-Charging-Case-2nd-Gen-White-3831558948435-1.jpg",
+      "name": "White 2nd Gen AirPods with Charging Case",
+      "brand": "Apple",
+      "desc": "AirPods With Charging Case: More Than 24 Hours Listening Time,3 Up To 18 Hours Talk Time8. AirPods (Single Charge): Up To 5 Hours Listening Time,1 Up To 3 Hours Talk Time2. 15 Minutes In The Case Equals Up To 3 Hours Listening Time4 Or Up To 2 Hours Talk Time. Warranty: 1 Year. Warranty Provided By Brand/Manufacturer",
+      "price": 14999
+    }
+  ]
+  
