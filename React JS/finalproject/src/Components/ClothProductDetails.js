@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import "./ClothProductDetails.css";
 // import placeholderImage from "./download (1).jpeg"
 
-const ClothProductDetail = () => {
+const ClothProductDetail = ({handleAddProduct}) => {
   const [errorImage, setErrorImage] = useState(false);
 
   const { productId } = useParams(); // Get the productId from URL params
@@ -26,6 +26,8 @@ const ClothProductDetail = () => {
   if (!product) {
     return <div>Product not found</div>;
   }
+
+
 
   return (
     <div id="clothProductDetails">
@@ -48,7 +50,7 @@ const ClothProductDetail = () => {
             <p>{product.desc}</p>
           </div>
           <div>
-            <button>Add to Cart</button>
+            <button onClick={() => handleAddProduct(product)}>Add to Cart</button>
           </div>
         </div>
       </div>

@@ -8,16 +8,16 @@ import Nav from './Components/Nav';
 function App() {
   return (
   <div>
-   {/* <Navbar/>
+   <Navbar/>
     <Router>
       <Routes>
         <Route path='/' element={<Login/>} />
         <Route path='/register' element={<Register/>}/>
         <Route path='/home' element={<Home/>}/>
       </Routes>
-    </Router> */}
+    </Router>
 
-   <Nav/>
+   {/* <Nav/> */}
    
   </div>
    

@@ -3,11 +3,17 @@
   margin: 0%;
   box-sizing: border-box;
 }
+/* sliding container */
+#sliding_container{
+  width: 90%;
+  margin: 2% auto;
+}
+
 
 /* clothing_box */
 #cloth_for_men_women {
   width: 100%;
-  margin: 3% auto;
+  margin: 1% auto;
 }
 #cloth_for_men_women > h1 {
   font-family: sans-serif;
