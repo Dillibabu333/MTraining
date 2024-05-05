@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json()); 
 
 // MongoDB setup using Mongoose
-mongoose.connect('mongodb://localhost:27017/Dilli', { //mongodb://localhost:27017- mongodb connection string /Sujit database name 
+mongoose.connect('mongodb://localhost:27017/Demoapp', { //mongodb://localhost:27017- mongodb connection string /Sujit database name 
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -24,42 +24,56 @@ db.once('open', () => {
   console.log('Connected to MongoDB');
 });
 
-const loginSchema = new mongoose.Schema({
-  loginName: String,
-  loginPassword: String,
+// User model
+const UserSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  phno: {
+    type: Number,
+    required: true,
+    unique: true,
+  },
+  gender: {
+    type: String,
+    enum: ['male', 'female'],
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
 });
 
-const Login = mongoose.model('Login', loginSchema);// here Login- is a collection  if it the mentioned collection is present in a db means it will be accessed or it will be create a mentioned  collecton with suffix 's'. 
+const User = mongoose.model('registered_users', UserSchema);
 
-app.post('/insert', async (req, res) => {  // /insert- this route it will use to connect the client using API- 
-  const { loginName, loginPassword } = req.body;
 
+// User routes
+app.post('/register', async (req, res) => {
   try {
-    const login = new Login({
-      loginName, // Use the correct key from req.body
-      loginPassword, // Use the correct key from req.body
-    });
+    // Check if the email already exists
+    const existingUser = await User.findOne({ email: req.body.email });
 
-    await login.save();
-    console.log('Successfully logged in', login._id);
+    if (existingUser) {
+      // If the email is already present, send an alert and return an error response
+      return res.status(400).json({ error: 'User with this email already exists' });
+    }
 
-    res.status(201).json({ message: 'Login successfully.' });
-  } catch (error) {
-    console.error('Not logged in', error);
-    res.status(500).json({ error: 'Failed to login' });
+    // If the email is not present, create the new user
+    const user = await User.create(req.body);
+    res.status(201).json(user); // Use status 201 for resource creation
+  } catch (err) {
+    res.status(400).json({ error: err.message });
   }
 });
 
 
-app.get('/getAll', async (req, res) => {  // /get- this route it will use to connect the client using API- 
-
-  try {
-  const allUser= await Login.find({});
-  res.status({status:"ok", data :allUser});
-  } catch (error) {
-    console.log(error);
-  }
-});
 
 app.listen(5000, () => {
   console.log('Backend server is running on http://localhost:5000');
