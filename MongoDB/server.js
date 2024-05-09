@@ -26,7 +26,11 @@ db.once('open', () => {
 
 // User model
 const UserSchema = new mongoose.Schema({
-  name: {
+  firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
     type: String,
     required: true,
   },
@@ -36,13 +40,13 @@ const UserSchema = new mongoose.Schema({
     unique: true,
   },
   phno: {
-    type: Number,
+    type: String,
     required: true,
     unique: true,
   },
   gender: {
     type: String,
-    enum: ['male', 'female'],
+    enum: ['male', 'female','others'],
     required: true,
   },
   password: {
@@ -54,7 +58,7 @@ const UserSchema = new mongoose.Schema({
 const User = mongoose.model('registered_users', UserSchema);
 
 
-// User routes
+// register routes
 app.post('/register', async (req, res) => {
   try {
     // Check if the email already exists
@@ -73,7 +77,32 @@ app.post('/register', async (req, res) => {
   }
 });
 
+// Login route
+app.post('/login', async (req, res) => {
+  const { email, password } = req.body;
 
+  const user = await User.findOne({ email });
+
+  if (!user) {
+    return res.status(401).json({ message: 'Invalid email' });
+  }
+
+  if (password !== user.password) {
+    return res.status(401).json({ message: 'Invalid password' });
+  }
+
+  res.json({ success: true });
+});
+
+// Fetch all users route
+app.get('/users', async (req, res) => {
+  try {
+    const users = await User.find();
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
 app.listen(5000, () => {
   console.log('Backend server is running on http://localhost:5000');
