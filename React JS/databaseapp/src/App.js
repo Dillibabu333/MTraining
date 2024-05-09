@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Register from "./Components/Register";
 import Login from "./Components/Login";
 import Home from "./Components/Home";
-import ProductForm from "./ProductForm";
+import ProductForm from "./Components/ProductForm";
 
 function App() {
   
