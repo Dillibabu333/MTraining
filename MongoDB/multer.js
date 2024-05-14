@@ -78,6 +78,17 @@ app.post('/insert', upload.single('productImage'), async (req, res) => {
   }
 });
 
+app.get('/products', async (req, res) => {
+  try {
+    const data = await Product.find();  // find() method it finds all the data present that mentioned callection 
+    res.json(data);
+  } catch (error) {
+    console.error('Error fetching product data:', error);
+    res.status(500).json({ error: 'Failed to fetch product data.' });
+  }
+});
+
+  app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
 app.listen(PORT, () => {
