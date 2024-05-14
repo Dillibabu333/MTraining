@@ -1,0 +1,27 @@
+.product-list{
+    width: 100%;
+    margin: auto;
+}
+.product-heading{
+    text-align: center;
+    padding: 3%;
+}
+.product-grid{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5%;
+}
+.product-item{
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.product-image{
+     width: 100%;
+     border-top-left-radius: 8px;
+     border-top-right-radius: 8px;
+}
+.product-sp{
+padding: 3%;
+}
