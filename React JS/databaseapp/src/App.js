@@ -1,9 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Register from "./Components/Register";
-import Login from "./Components/Login";
-import Home from "./Components/Home";
-import ProductForm from "./Components/ProductForm";
-import ProductList from "./Components/ProductList";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import Register from "./Components/Register";
+// import Login from "./Components/Login";
+// import Home from "./Components/Home";
+// import ProductForm from "./Components/ProductForm";
+// import ProductList from "./Components/ProductList";
+import LabServiceTable from "./Components/LabServiceTable";
 
 function App() {
   
@@ -17,8 +18,9 @@ function App() {
       <Route path="/home" element={<Home/>}/>
     </Routes>
    </BrowserRouter>   */}
-   <ProductForm/>
-   <ProductList/>
+   {/* <ProductForm/> */}
+   {/* <ProductList/> */}
+   <LabServiceTable/>
     </div>
   );
 }
