@@ -25,7 +25,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log('Form Data:', formData); // Log the form data
+      console.log('Form Data :', formData); // Log the form data
       // Send login data to backend
       const response = await axios.post('http://localhost:5000/login', formData);
 
