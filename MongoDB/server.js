@@ -2,6 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+
 const app = express();
 
 // Use the 'cors' middleware to enable CORS for all routes
@@ -9,7 +10,7 @@ app.use(cors());
 app.use(express.json()); 
 
 // MongoDB setup using Mongoose
-mongoose.connect('mongodb://localhost:27017/Demoapp', { //mongodb://localhost:27017- mongodb connection string /Sujit database name 
+mongoose.connect('mongodb://localhost:27017/Demoapp', { //mongodb://localhost:27017- mongodb connection string /demoap database name 
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
