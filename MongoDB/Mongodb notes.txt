@@ -1,0 +1,1942 @@
+
+         
+                                                                                               
+                                                                                                                                                  27-04-2024/Sat
+                                                                                                                                                 26-04-2024/Fri
+
+  MongoDB set UP  
+  building web App and API(Application Programming Interface)
+  console.error('MongoDB connection error:', err);
+  console.log('Backend server is running on http://localhost:5000');
+  console.log('Connected to MongoDB');
+  const { loginName, loginPassword } = req.body;
+  loginName: String,
+  loginPassword: String,
+  try {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  }
+  } catch (error) {
+"asdf":"1234",
+* Document orinted database 
+* JSON- fomate (javascript object notetion )
+* MIddelwares - example -cors - cross origin resorce sharing -  it is a mddel ware it help to enable the accesess from different web brwoser like chrome , edge , firefox
+* No-SQL   open source data base 
+* Routing - Handling the HTTP request and responses
+* we write the server side logics 
+*> Database setup here we are using the mongoDB
+// MongoDB setup using Mongoose
+// Use the 'cors' middleware to enable CORS for all routes
+1. Create the folder called MongoDB 
+1. MongoDB Compass,-Localhost-the data will be stored in locally currently we using this db 
+1> there will be requred fields (ex- express, mongoose , cors etc )
+2. Enter that peticular folder and try this cammands in a terminal 
+2. MDB Atlas- cloud based database service - the data will be stored globaly , only can see who the access of it .
+2> we  need to define the  schema - which type of data we are storing in a database 
+3. npm install express  mongoose cors
+3> we need write logic for the CRUD  opration (post, fetch , put and delete methods ) 
+4> Port number 
+Administration:
+Collections
+Collections:
+Create - post method 
+Documenting or perrforming the CRUD(Create,read ,update and delete) operations  
+Documents
+Documents:
+EX-{
+Express- its also a  webapplication  frame- work for Node.js , it is designed for 
+Getting Started  from here 
+Getting Started:
+Hii Every one this is Arun from Matrical Technologies Well Come All for the Back end Session.                                                      24-04-2024/Wed
+MongoDB - 
+MongoDB -  
+Node.js   -  Is a JS Run time built on chrome V8 js engine
+Querying or asking 
+Querying:
+Read - fetch method 
+Some MongoDB shell Commands to perfarm the CRUD operation 
+Today Task : Perform the CRUD operations in a Mongodb Shell           
+Update - put method or request 
+
+
+db # show current db - "mydb"
+db - Show current database display the current db 
+db.<collection>.deleteOne() - Delete one document
+db.<collection>.find() - Find all documents
+db.<collection>.find().limit(10) - Limit results
+db.<collection>.find().sort({age: -1}) - Sort results
+db.<collection>.find({age: {$gt: 18}}) - Query with operators
+db.<collection>.find({name: 'John'}) - Query by property
+db.<collection>.updateMany() - Update or modify  multiple documents.
+db.<collection_name>.deleteMany() - Delete more  than one document present in collection.
+db.<collection_name>.drop() - Delete a collection custamization way. drop()-> it is method or function- predifined method or function
+db.<collection_name>.find() - it finds all  List of documents present  in collection - find()- pre- defined method 
+db.<collection_name>.findOne() - Return one or a single document present in a collection
+db.<collection_name>.insertMany([{}, {}]) - Insert multiple documents -[Array fomate - will use array for inserting more than one document ]
+db.<collection_name>.insertOne({}) - Insert a singele document into a  collection - insertOne()-> pre-defined method 
+db.<collection_name>.updateOne() - Update or modify a  single or one  document only 
+db.cloneDatabase() # clones the current db
+db.createCollection('<collectin_name>') - Create a new collection  is also a method use to create a new collection 
+db.createCollection('users') # create "users" collection
+db.dropDatabase() # deletes mydb database
+db.on('error', (err) => {
+db.once('open', () => {
+db.users.deleteMany({age: {$gt: 30}}) # delete users older than 30
+db.users.deleteOne({name: 'John'}) # delete one user
+db.users.drop() # delete "users" collection
+db.users.find() # find all users
+db.users.find() # list all users
+db.users.find().limit(2) # limit to 2 results
+db.users.find().sort({age: -1}) # sort by age descending
+db.users.find({age: {$gt: 30}}) # find age greater than 30
+db.users.find({name: 'John'}) # find John
+db.users.findOne({name: 'John'}) # find one user
+db.users.insertMany([{name: 'Jane', age: 25}, {name: 'Jim', age: 40}]) # insert multiple docs 
+db.users.insertOne({name: 'John', age: 30}) # insert one document
+db.users.stats() # show stats on users collection
+db.users.updateMany({age: {$lt: 30}}, {$inc: {age: 1}}) # increment age 
+db.users.updateOne({name: 'John'}, {$set: {age: 31}}) # update one user
+delete - delete method 
+from using the collection 
+mongo # connect to local MongoDB
+mongo - Connect to MongoDB 
+show dbs 
+show dbs # show databases - admin, config, local
+show dbs - Show all databases
+the genral template of the back end or server side code is as  fallowes 
+there  four methods CRUD 
+this is Back end or the server side code 
+use <db> - Switch to database use cammand 
+use mydb
+use mydb # switch to "mydb" database
+uses of Express 
+}
+
+});
+
+
+      
+
+
+
+
+
+//   Back end code or the Server side code for the login Page   
+
+// server.js 
+
+const express = require('express');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const app = express();
+
+// Use the 'cors' middleware to enable CORS for all routes
+app.use(cors());
+app.use(express.json()); 
+
+// MongoDB setup using Mongoose
+mongoose.connect('mongodb://localhost:27017/Sujit', { //mongodb://localhost:27017- mongodb connection string /Sujit database name 
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const db = mongoose.connection;
+
+db.on('error', (err) => {
+  console.error('MongoDB connection error:', err);
+});
+
+db.once('open', () => {
+  console.log('Connected to MongoDB');
+});
+
+const loginSchema = new mongoose.Schema({
+  loginName: String,
+  loginPassword: String,
+});
+
+const Login = mongoose.model('Login', loginSchema);// here Login- is a collection  if it the mentioned collection is present in a db means it will be accessed or it will be create a mentioned  collecton with suffix 's'. 
+
+app.post('/insert', async (req, res) => {  // /insert- this route it will use to connect the client using API- 
+  const { loginName, loginPassword } = req.body;
+
+  try {
+    const login = new Login({
+      loginName, // Use the correct key from req.body
+      loginPassword, // Use the correct key from req.body
+    });
+
+    await login.save();
+    console.log('Successfully logged in', login._id);
+
+    res.status(201).json({ message: 'Login successfully.' });
+  } catch (error) {
+    console.error('Not logged in', error);
+    res.status(500).json({ error: 'Failed to login' });
+  }
+});
+
+app.listen(5000, () => {
+  console.log('Backend server is running on http://localhost:5000');
+});
+
+
+
+
+this the Client side Or Front End side code for the Login Page 
+// LoginForm.js
+
+import React, { useState } from 'react';
+import axios from 'axios';   //npm i  axios  package it will handel the HTTP request and response 
+
+const  LoginForm = () => {
+  const [formData, setFormData] = useState({
+    loginName: '',
+    loginPassword: '',
+  });
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); 
+    setSubmitting(true);
+
+    try {
+      // Send the form data to the server
+      const response = await axios.post('http://localhost:5000/insert', formData);
+
+      console.log(response.data);
+      setError('');
+      alert('Login successfully.');
+    } catch (error) {
+      console.error(error);
+      setError('Internal Server Error');
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return (
+    <div>
+      <h2>Login Form</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Name:</label>
+          <input
+            type="text"
+            name="loginName" // Make sure the name matches the key in formData
+            value={formData.loginName}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input
+            type="text"
+            name="loginPassword" // Make sure the name matches the key in formData
+            value={formData.loginPassword}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <button type="submit" disabled={submitting}>
+          {submitting ? 'Logging in...' : 'Login'}
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default LoginForm;
+
+
+here axios package which is use to access the third party API' s
+
+
+
+Task -  try to use fetch method and disply the stored data in the web browser.                                                                03-05-2024/fri
+
+to irun the server automatically use this cammand  ->  npm i nodemon
+
+req-Request- which is sending to the server 
+res-response - which getting from the Server 
+200 -milisec- this indicate the success message 
+500 - milisec - this indicate the error message 
+
+//server.js   this is serever side or BAck end code  for fetching the data from the DB   
+
+
+import React, { useState, useEffect } from 'react';
+
+const FetchDataComponent = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from the server when the component mounts
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/fetch0');
+        const result = await response.json();
+        setData(result); // to get the updated result ex - initilly i have stror the my name as Arun - i have updated to Kumar latest 
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      <h2>Loggedin User Data:</h2>
+      <ul>
+        {data.map((item) => (   
+          <li key={item._id}>
+          Login Name: {item.loginName},Password: {item.loginPassword} , ConfirmPassword: {item.ConfirmPassword} 
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+
+
+
+app.get('/fetch0', async (req, res) => {
+  try {
+    const logins = await Login.find();  // find()  is pre-defined method or inbuilt method it finds all the data present in the mentioned collection Login 
+    res.status(200).json(logins);
+  } catch (error) {
+    console.error('Failed to fetch data', error);
+    res.status(500).json({ error: 'Failed to fetch data' });
+  }
+});
+
+app.listen(5000, () => {
+  console.log('Backend server is running on http://localhost:5000');
+});
+
+
+
+//FetchDataComponent.js  this is front end or client side code to fetch the login data
+
+
+import React, { useState, useEffect } from 'react';
+
+const FetchDataComponent = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from the server when the component mounts	
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/fetch0');
+        const result = await response.json();
+        setData(result); // to get the updated result ex - initilly i have stror the my name as Arun - i have updated to Kumar latest 
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      <h2>Loggedin User Data:</h2>
+      <ul>
+        {data.map((item) => (   
+          <li key={item._id}>
+          Login Name: {item.loginName},Password: {item.loginPassword} , ConfirmPassword: {item.ConfirmPassword} 
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+
+export default FetchDataComponent; 
+
+
+
+Task:  Try to Create the LaginPage  and validate it aftre loggedIn  get the All Login User data                                                          04-05-2024/Sat
+
+this is the server side code for the Above Task 
+
+
+// app.js    Backend or server side code 
+
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+
+// User model
+const UserSchema = new mongoose.Schema({
+  firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  gender: {
+    type: String,
+    enum: ['male', 'female'],
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+});
+
+const User = mongoose.model('User', UserSchema);
+
+// Connect to MongoDB
+mongoose.connect('mongodb://localhost:27017/users', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+mongoose.connection.on('error', (err) => {
+  console.error('MongoDB connection error:', err);
+});
+
+mongoose.connection.once('open', () => {
+  console.log('Connected to MongoDB');
+});
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// User routes
+app.post('/users', async (req, res) => {
+  try {
+    // Check if the email already exists
+    const existingUser = await User.findOne({ email: req.body.email });
+
+    if (existingUser) {
+      // If the email is already present, send an alert and return an error response
+      return res.status(400).json({ error: 'User with this email already exists' });
+    }
+
+    // If the email is not present, create the new user
+    const user = await User.create(req.body);
+    res.status(201).json(user); // Use status 201 for resource creation
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// Fetch all users route
+app.get('/users', async (req, res) => {
+  try {
+    const users = await User.find();
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Login route
+app.post('/login', async (req, res) => {
+  const { email, password } = req.body;
+
+  const user = await User.findOne({ email });
+
+  if (!user) {
+    return res.status(401).json({ message: 'Invalid email' });
+  }
+
+  if (password !== user.password) {
+    return res.status(401).json({ message: 'Invalid password' });
+  }
+
+  res.json({ success: true });
+});
+
+app.listen(5005, () => {
+  console.log('Server is listening on port 5005');
+}); 
+
+
+
+                                                                                                                                                  06-05-2024/Mon
+
+
+//LoginMERN.js  
+
+
+
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
+const LoginMERN = () => {
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
+
+  const [error, setError] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); 
+
+    try {
+      console.log('Form Data:', formData); // Log the form data
+      // Send login data to backend
+      const response = await axios.post('http://localhost:5005/login', formData);
+
+      if (response.data.success) {
+        // Successful login
+        // Show alert on successful login
+        alert('Login successful!');
+
+        // Redirect to dashboard or any other desired page
+        navigate('/GetReg');
+      } else {
+        // Unsuccessful login
+        setError(response.data.error);
+      }
+    } catch (err) {
+        console.error('Error:', err.response.data); // Log the error response details
+      
+        if (err.response.data.message) {
+          // Show the specific error message from the server in the alert
+          alert(err.response.data.message);
+        } else {
+          // If no specific message, show a generic error message
+          alert('An error occurred');
+        }
+      }
+    }
+
+  return (
+    <div>
+      <h1>Login</h1>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div>
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+        </div>
+
+{/* <input type="number" inputMode='numeric' pattern='[0-9]*' /> */}
+        {/* {error && <p style={{ color: 'red' }}>{error}</p>} */}
+
+        <button type="submit">Login</button>
+        <Link to='/Register'>Register Now</Link> 
+
+      </form>
+    </div>
+  );
+};
+
+export default LoginMERN;
+
+
+
+
+
+
+//FormMERN.js 
+
+
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios'; 
+
+const FormMERN = () => {
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    gender: '', // Add a 'gender' field to the form data
+    password: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    try {
+      console.log('Form Data:', formData); // Log the form data
+      // Send formData to backend
+      await axios.post('http://localhost:5005/users', formData);
+  
+      // Redirect on success
+      navigate('/'); // / this will redirect to the Landing page 
+    } catch (err) {
+      console.error('Error:', err.response.data); // Log the error response details
+  
+      // Show an alert with the error message
+      window.alert(`Error: ${err.response.data.error}`);
+    }
+  };
+  
+  
+
+  return (
+    <div>
+      <h1>React Form Example</h1>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="firstName">First Name</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            value={formData.firstName}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div>
+          <label htmlFor="lastName">Last Name</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div>
+          <label>Gender</label>
+          <input
+            type="radio"
+            id="male"
+            name="gender"
+            value="male"
+            checked={formData.gender === "male"}
+            onChange={handleChange}
+          />
+          <label htmlFor="male">Male</label>
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="female"
+            checked={formData.gender === "female"}
+            onChange={handleChange}
+          />
+          <label htmlFor="female">Female</label>
+        </div>
+        <div>
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+        </div>
+
+
+        <button type="submit">Submit</button>
+        <Link to='/'>Login Now</Link>
+      </form>
+    </div>
+  );
+};
+
+
+export default FormMERN;
+
+
+
+
+//FormDataMERN.js
+
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
+const FormDataMERN = () => {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const response = await axios.get('http://localhost:5005/users');
+        setUsers(response.data);
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+
+    fetchUsers();
+  }, []); // Run this effect only once on component mount
+
+  return (
+    <div>
+      <h2>User List</h2>
+      <ul>
+        {users.map((user) => (
+          <li key={user._id}> 
+            <p>First Name: {user.firstName}</p>
+            <p>Last Name: {user.lastName}</p>
+            <p>Email: {user.email}</p>
+            <p>Gender: {user.gender}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default FormDataMERN;
+
+
+in the App.js    
+
+
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+
+
+   <Router>
+    <Routes>
+    <Route path="/" element={<LoginMERN/>} />
+    <Route path="/Register" element={<FormMERN/>} />
+    <Route path="/GetReg" element={<FormDataMERN/>} />
+     
+    
+    </Routes>
+   </Router>
+
+                                                                                                                                            08/05/2024/Wed
+
+
+Multer: it is a middeleware - it will handel the file uplodings 
+step 1>  Create the folder called uploads in your back end project directory 
+Step 2> install the neccessary packages run this cammand- npm i multer path
+
+
+this is  the  server side or the back end code for file uploading 
+
+
+const express = require('express');
+const cors = require('cors');
+const multer = require('multer');
+const mongoose = require('mongoose');
+const path = require('path');
+const app = express();
+
+const PORT = 5000
+
+// Use the 'cors' middleware to enable CORS for all routes
+app.use(cors());
+app.use(express.json());
+
+// Multer setup for file upload
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {//destination of the file where stored in this case it will store in  uploads folder(we need to create it)
+    cb(null, 'uploads/');
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + '-' + file.originalname);// giving unique file name for each uploaded file 
+  },
+});
+
+const upload = multer({ storage: storage });
+
+// MongoDB setup using Mongoose
+mongoose.connect('mongodb://localhost:27017/admin', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const db = mongoose.connection;
+
+db.on('error', (err) => {
+  console.error('MongoDB connection error:', err);
+});
+
+db.once('open', () => {
+  console.log('Connected to MongoDB');
+});
+
+// Define a Mongoose schema for your product data
+const productSchema = new mongoose.Schema({
+  productName: String,
+  productImage: String,
+  productDescription: String,
+  specificInformation: String,
+  mrp: Number,
+  sp: Number,
+});
+
+const Product = mongoose.model('Product', productSchema);
+
+// API endpoint to insert product data into MongoDB
+// Update the route to use upload.array('productImages') for inserting multiple images
+app.post('/insert', upload.single('productImage'), async (req, res) => {
+  const { productName, productDescription, specificInformation, mrp, sp } = req.body;
+  const productImage = req.file.filename; //here product image i am taking it as a file 
+
+  try {
+    const product = new Product({
+      productName,
+      productImage,
+      productDescription,
+      specificInformation,
+      mrp: parseFloat(mrp),
+      sp: parseFloat(sp),
+    });
+
+    await product.save();
+    console.log('Product inserted:', product._id);
+
+    res.status(201).json({ message: 'Product added successfully.' });
+  } catch (error) {  
+    console.error('Error inserting product:', error);
+    res.status(500).json({ error: 'Failed to add product.' });
+  }
+});
+
+
+
+app.listen(PORT, () => {
+  console.log(`Backend server is running on http://localhost:${PORT}`);
+});
+
+                                                                                                                                                09-05-2024/Thu
+
+this is the front end code  for  the file uploading 
+
+//ProductForm.js 
+
+import React, { useState } from 'react';
+import axios from 'axios';
+
+const ProductForm = () => {
+  const [formData, setFormData] = useState({
+    productName: '',
+    productImage: null,
+    productDescription: '',
+    specificInformation: '',
+    mrp: '',
+    sp: '',
+  });
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
+
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleImageChange = (e) => {
+    setFormData({
+      ...formData,
+      productImage: e.target.files[0],
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+
+    try {
+
+      const response = await axios.post('http://localhost:5000/insert', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      console.log(response);
+      setError('');
+      alert('Product added successfully.');
+    } catch (error) {
+      console.error(error);
+      setError('Internal Server Error');
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return (
+    <div className="container">
+      <h2>Add Product</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="row">
+          <div className="col-md-6 mb-3">
+            <label>Product Name:</label>
+            <input
+              type="text"
+              name="productName"
+              value={formData.productName}
+              onChange={handleChange}
+              required
+              className="form-control"
+            />
+          </div>
+          <div className="col-md-6 mb-3">
+            <label>Product Image:</label>
+            <input
+              type="file"
+              name="productImage"
+              onChange={handleImageChange}
+              required
+              className="form-control"
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-6 mb-3">
+            <label>Product Description:</label>
+            <textarea
+              name="productDescription"
+              value={formData.productDescription}
+              onChange={handleChange}
+              required
+              className="form-control"
+            />
+          </div>
+          <div className="col-md-6 mb-3">
+            <label>Specific Information:</label>
+            <textarea
+              name="specificInformation"
+              value={formData.specificInformation}
+              onChange={handleChange}
+              required
+              className="form-control"
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-6 mb-3">
+            <label>MRP:</label>
+            <input
+              type="number"
+              name="mrp"
+              value={formData.mrp}
+              onChange={handleChange}
+              required
+              className="form-control"
+            />
+          </div>
+          <div className="col-md-6 mb-3">
+            <label>SP:</label>
+            <input
+              type="number"
+              name="sp"
+              value={formData.sp}
+              onChange={handleChange}
+              required
+              className="form-control"
+            />
+          </div>
+        </div>
+        <button type="submit" disabled={submitting} className="btn btn-dark">
+          {submitting ? 'Adding Product...' : 'Add Product'}
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default ProductForm;
+
+
+
+this is the server side or backend code for the fetching the image or files                                                                     10-05-2024/Friday
+
+//server.js 
+
+
+const express = require('express');
+const cors = require('cors');
+const multer = require('multer'); // multer is a middelware is used for handling the file uploading 
+const mongoose = require('mongoose');
+const path = require('path');
+const app = express();
+
+const PORT = 5000
+
+// Use the 'cors' middleware to enable CORS for all routes
+ app.use(cors());
+app.use(express.json());
+
+// Multer setup for file upload
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {//destination of the file where stored in this case it will store in  uploads folder(we need to create it)
+    cb(null, 'uploads/');
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + '-' + file.originalname);// giving unique file name for each uploaded file 
+  },
+});
+
+const upload = multer({ storage: storage });
+
+// MongoDB setup using Mongoose
+mongoose.connect('mongodb://localhost:27017/admin', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const db = mongoose.connection;
+
+db.on('error', (err) => {
+  console.error('MongoDB connection error:', err);
+});
+
+db.once('open', () => {
+  console.log('Connected to MongoDB');
+});
+
+// Define a Mongoose schema for your product data
+const productSchema = new mongoose.Schema({
+  productName: String,
+  productImage: String,
+  productDescription: String,
+  specificInformation: String,
+  mrp: Number,
+  sp: Number,
+});
+
+const Product = mongoose.model('Product', productSchema);
+
+// API endpoint to insert product data into MongoDB
+// Update the route to use upload.array('productImages') for inserting multiple images
+app.post('/insert', upload.single('productImage'), async (req, res) => {
+  const { productName, productDescription, specificInformation, mrp, sp } = req.body;
+  const productImage = req.file.filename; //here product image i am taking it as a file 
+
+  try {
+    const product = new Product({
+      productName,
+      productImage,
+      productDescription,
+      specificInformation,
+      mrp: parseFloat(mrp),
+      sp: parseFloat(sp),
+    });
+
+    await product.save();
+    console.log('Product inserted:', product._id);
+
+    res.status(201).json({ message: 'Product added successfully.' });
+  } catch (error) {  
+    console.error('Error inserting product:', error);
+    res.status(500).json({ error: 'Failed to add product.' });
+  }
+});
+
+// API endpoint to fetch product data from MongoDB
+app.get('/products', async (req, res) => {
+  try {
+    const data = await Product.find();  // find() method it finds all the data present that mentioned callection 
+    res.json(data);
+  } catch (error) {
+    console.error('Error fetching product data:', error);
+    res.status(500).json({ error: 'Failed to fetch product data.' });
+  }
+});
+
+  app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+app.listen(PORT, () => {
+  console.log(`Backend server is running on http://localhost:${PORT}`);
+});
+
+-------------------------------------------------*****--------------                                                                                               11-05-2024/Sat
+
+
+Explanation of  the back end or server side code for fetching the file or image 
+
+app.get('/products', async (req, res) => {
+  try {
+    const data = await Product.find();  // find() method it finds all the data present that mentioned callection 
+    res.json(data);
+  } catch (error) {
+    console.error('Error fetching product data:', error);
+    res.status(500).json({ error: 'Failed to fetch product data.' });
+  }
+});
+
+  app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+
+*  /uploads :- it will check any request are made from this directory(/uploads) folder 
+
+
+* express.static :- this is inbuilt middelware function in Express it serve the static files like ,images files , js files etc
+
+
+* uploads :-   this is the directory name where all our uploaded file are present.
+
+
+this is the front end code for displaying the fetched images 
+
+
+//ProductList.js
+
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import './ProductList.css'; 
+const ProductList = () => {
+  // State to hold the list of products and loading status
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // Function to fetch products from the backend API
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/products');
+        setProducts(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error(error);
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  // Show loading message while fetching data
+  if (loading) {
+    return <div className="loading">Loading...</div>;
+  }
+
+  // Show error message if data couldn't be fetched
+  if (products.length === 0) {
+    return <div className="error">Oops! Unable to fetch products.</div>;
+  }
+
+
+  return (
+    <div className="product-list">
+      <h2>Product List</h2>
+      <div className="product-grid">
+        {products.map((product) => (
+          <div key={product._id} className="product-item">
+            <img
+              src={`http://localhost:5000/uploads/${product.productImage}`}
+              alt={product.productName} 
+              className="product-image"
+            />
+            <p className="product-sp">SP: ₹{product.sp}</p>
+            &nbsp;&nbsp;&nbsp;
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ProductList;
+
+
+
+                                                                                                                                                           14-05-2024/Tue
+
+
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+app.use(cors());
+app.use(express.json());
+
+const mongoURI = 'mongodb://localhost:27017/labServicesDB';
+
+mongoose.connect(mongoURI, { 
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}) 
+.then(() => {
+    console.log('Connected to MongoDB');
+})
+.catch((error) => {
+    console.error('Error connecting to MongoDB:', error);
+});
+
+const labServiceSchema = new mongoose.Schema({
+    serviceId: Number,
+    testName: String,
+    testPrice: Number,
+    serviceTax: Number,
+    testCode: String,
+    selectedVendor: String,
+});
+
+const LabService = mongoose.model('LabService', labServiceSchema);
+
+// Create routes for CRUD operations
+
+app.get('/api/lab-services', async (req, res) => {
+    try {
+        const labServices = await LabService.find();  
+        res.json(labServices);
+    } catch (error) {
+        res.status(500).json({ error: 'Error fetching lab services' });
+    }
+}); 
+
+app.post('/api/lab-services', async (req, res) => {
+    const labServiceData = req.body;
+
+    try {
+        const newLabService = new LabService(labServiceData);
+        await newLabService.save();
+        res.status(201).json(newLabService);
+    } catch (error) {
+        res.status(400).json({ error: 'Error adding lab service' });
+    }
+});
+
+app.put('/api/lab-services/:id', async (req, res) => {
+    const labServiceId = req.params.id;
+    const labServiceData = req.body;
+
+    try {
+        const updatedLabService = await LabService.findByIdAndUpdate(
+            labServiceId,
+            labServiceData,
+            { new: true }
+        );
+        res.json(updatedLabService);
+    } catch (error) {
+        res.status(400).json({ error: 'Error updating lab service' });
+    }
+});
+
+app.delete('/api/lab-services/:id', async (req, res) => {
+    const labServiceId = req.params.id;
+
+    try {
+        await LabService.findByIdAndDelete(labServiceId);
+        res.status(204).end();
+    } catch (error) {
+        res.status(400).json({ error: 'Error deleting lab service' });
+    }
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
+
+
+
+                                                                                                                                                              15-05-2024/Wed
+
+* first create the component called   LabServiceTable.js  and put this below code on it  
+
+//LabServiceTable.js
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Popup from 'reactjs-popup';
+import LabServiceForm from './LabServiceForm';
+import './LabServiceTable.css';
+
+
+
+const LabServiceTable = () => {
+    const [labServices, setLabServices] = useState([]);
+    const [selectedService, setSelectedService] = useState(null);
+    const [isAddPopupOpen, setAddPopupOpen] = useState(false);
+    
+
+    useEffect(() => {
+        fetchLabServices();
+    }, []);
+
+    const fetchLabServices = async () => {
+        try {
+            const response = await axios.get('http://localhost:5000/api/lab-services');
+            setLabServices(response.data);
+        } catch (error) {
+            console.error('Error fetching lab services:', error);
+        }
+    };
+
+    const handleEdit = (service) => {
+        setSelectedService(service);
+    };
+
+        const handleAdd = () => {
+        setSelectedService(null);
+        setAddPopupOpen(true);
+    };
+
+    const handleAddOrUpdate = async (formData) => {
+        try {
+            if (selectedService) {
+                await axios.put(`http://localhost:5000/api/lab-services/${selectedService._id}`, formData);
+            } else {
+                await axios.post('http://localhost:5000/api/lab-services', formData);
+            }
+            fetchLabServices(); //this function  to get the updated data or latest data or  information
+            setSelectedService(null);
+            setAddPopupOpen(false);
+        } catch (error) {
+            console.error('Error adding/updating lab service:', error);
+        }
+    };
+    
+
+
+        const handleCancel = () => {
+        setSelectedService(null);
+        setAddPopupOpen(false);
+    };
+
+    const handleDelete = async (id) => {
+        try {
+            await axios.delete(`http://localhost:5000/api/lab-services/${id}`);
+            fetchLabServices(); //this function  to get the updated data or latest data or  information
+        } catch (error) {
+            console.error('Error deleting lab service:', error);
+        }
+    };
+
+    return (
+        
+        <div className="lab-service-table-container_5">
+            <h2 className='lab-ser-headding-arun5'>Services</h2>
+            <h4 className="lab-ser-subheadding-arun5">Lab Service Management</h4>
+            <button className="add-button_5" onClick={handleAdd}>Add New Lab Service</button>
+            <table className="lab-service-table_5">
+                <thead>
+                    <tr>
+                        <th>Service ID</th>
+                        <th>Test Name</th>
+                        <th>Test Price</th>
+                        <th>Service Tax</th>
+                        <th>Test Code</th>
+                        <th>Vendor</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {labServices.map((service) => (
+                        <tr key={service._id}>
+                            <td>{service.serviceId}</td>
+                            <td>{service.testName}</td>
+                            <td>{service.testPrice}</td>
+                            <td>{service.serviceTax}</td>
+                            <td>{service.testCode}</td>
+                            <td>{service.selectedVendor}</td>
+                            <td>
+                                <button className="edit-button_5" onClick={() => handleEdit(service)}>Edit</button>
+                                <button className="delete-button_5" onClick={() => handleDelete(service._id)}>Delete</button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+            <Popup
+                open={selectedService !== null || isAddPopupOpen}
+                onClose={handleCancel}
+                closeOnDocumentClick
+                
+            >
+                <LabServiceForm
+                    selectedService={selectedService}
+                    onSubmit={handleAddOrUpdate}
+                    onCancel={handleCancel}
+                />
+            </Popup>
+        </div>
+    );
+};
+
+export default LabServiceTable;
+
+
+//LabServiceTable.css 
+
+/* LabServiceTable.css */
+
+/* Container styles */
+.lab-service-table-container_5 {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .lab-ser-headding-arun5{
+    display: flex;
+    justify-content: left;
+    color: #555;
+  }
+  .lab-ser-subheadding-arun5{
+    font-size: 17px;
+    display: flex;
+    justify-content: left;
+    color: blue;
+  } 
+  
+  /* Add button styles */
+  .add-button_5 {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* display: flex; */
+    margin-left: 38rem;
+  }
+  
+  .add-button_5:hover {
+    background-color: #0056b3;
+  }
+  
+    /* Styling for the search bar */
+    .search-bar_5 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: -20px;
+    }
+    
+    .search-input_5 {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      padding: 10px;
+    }
+    
+    .search-icon_5 {
+      margin-right: 8px; 
+      color: #555; 
+    }
+  
+  /* Table styles */
+  .lab-service-table_5 {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .lab-service-table_5 th,
+  .lab-service-table_5 td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .lab-service-table_5 th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  /* Button styles */
+  .edit-button_5,
+  .delete-button_5 {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 6px;
+  }
+  
+  .edit-button_5:hover,
+  .delete-button_5:hover {
+    background-color: #0056b3;
+  }
+
+
+
+* and create another component called LabServiceForm.js  put this below code on it 
+
+
+import React, { useState, useEffect } from 'react';
+import './LabServiceForm.css';
+
+const LabServiceForm = ({ selectedService, onSubmit, onCancel }) => {
+    const [formData, setFormData] = useState({
+        serviceId:'',
+        testName: '',
+        testPrice: '',
+        serviceTax: '',
+        testCode: '',
+        selectedVendor: '',
+    });
+
+    useEffect(() => {
+        if (selectedService) {
+            setFormData(selectedService);
+        } else {
+            setFormData({
+                serviceId:'',
+                testName: '',
+                testPrice: '',
+                serviceTax: '',
+                testCode: '',
+                selectedVendor: '',
+            });
+        }
+    }, [selectedService]);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({ ...prevData, [name]: value }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onSubmit(formData);
+    };
+
+    return (
+        <div className="popup-overlay_5">
+            <div className="popup-content_5">
+                <h2>{selectedService ? 'Edit Lab Service' : 'Add Lab Service'}</h2>
+                <form onSubmit={handleSubmit} className="popup-form_5">
+                <div className="popup-input_5">
+                        <label>Service ID:</label>
+                        <input
+                            type="number"
+                            name="serviceId"
+                            value={formData.serviceId}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="popup-input_5">
+                        <label>Test Name:</label>
+                        <input
+                            type="text"
+                            name="testName"
+                            value={formData.testName}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="popup-input_5">
+                        <label>Test Price:</label>
+                        <input
+                            type="number"
+                            name="testPrice"
+                            value={formData.testPrice}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="popup-input_5">
+                        <label>Service Tax:</label>
+                        <input
+                            type="number"
+                            name="serviceTax"
+                            value={formData.serviceTax}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="popup-input_5">
+                        <label>Test Code:</label>
+                        <input
+                            type="text"
+                            name="testCode"
+                            value={formData.testCode}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="popup-input_5">
+                        <label>Selected Vendor:</label>
+                        <input
+                            type="text"
+                            name="selectedVendor"
+                            value={formData.selectedVendor}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="button-group_5">
+                        <button className="popup-button_5" type="submit">{selectedService ? 'Update' : 'Add'}</button>
+                        <button className="popup-button_5" type="button" onClick={onCancel}>Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    );
+};
+
+export default LabServiceForm;
+
+
+
+//LabServiceForm.css 
+
+
+/* LabServiceForm.css */
+
+/* Popup overlay styles */
+.popup-overlay_5 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Popup content styles */
+  .popup-content_5 {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 90%;
+  }
+  
+  .popup-content_5 h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form styles */
+  .popup-form_5 {
+    display: grid;
+    gap: 12px;
+  }
+  
+  .popup-input_5 label {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .popup-input_5 input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 14px;
+  }
+  
+  .popup-input_5 input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+    outline: none;
+  }
+  
+  /* Button group styles */
+  .button-group_5 {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .popup-button_5 {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  
+  .popup-button_5:hover {
+    background-color: #0056b3;
+  }
+  
+  .popup-button_5:last-child {
+    background-color: #dc3545;
+  }
+  
+  .popup-button_5:last-child:hover {
+    background-color: #c82333;
+  }
+  
+  /* Additional styles for improved appearance */
+  /* Apply a modern font for improved readability */
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+
+
+
+And finally call it the <LabServiceTable/>  in the App.js      
+
+                                                                                                                                                           16-05-2024/Thu
+
+
+     *                MVC is  pattern   stands for Model , View and controller - to handel the server side logics 
+     *                  BY using MVC we can achieve the the whole backe end project can run in a single port number .
+
+               *  Model-  here we need to define the Schema  EX , LoginSchema , Employee Scema etc.. 
+               *  View -     User Inter
+               *  Controller - here we will write the Server side logic (to perfom the CRUD operation , post , get , put and delete ) 
+               *  Routes -     here we will give the routes path 
+              
+              *  App.js - this is js file it  will import all route file  using this file will run or exicuted cammand node App.js 
+
+       
+               .env port - envirolment  
+          
+      
+
+                                                                                                                                                         17-05-2024/Fri
+
+
+
+
+ 1> step:1  create the folder called  Config  and inside create the file called .env
+
+
+                                          MONGODB_URL=mongodb://localhost:27017/admin
+                                          PORT=5000
+                                 
+
+
+
+2> Create the folder called models and inside the models create the file  called LabServiceModel.js and paste the below code 
+
+                                           //LabServiceModel.js
+
+
+const mongoose = require('mongoose');
+
+const labServiceSchema = new mongoose.Schema({
+    serviceId: Number,
+    testName: String,
+    testPrice: Number,
+    serviceTax: Number,
+    testCode: String,
+    selectedVendor: String,
+});
+
+module.exports = mongoose.model('LabService', labServiceSchema);
+
+
+3> create the folder controller and create inside this file called LabServiceController.js file 
+
+           //LabServiceController   
+
+
+const LabService = require('../models/LabServiceModel');
+
+// Controller functions for CRUD operations
+exports.gettingallthelabserviceData = async (req , res) => {
+    try {
+        const labServices = await LabService.find();  // it finds all the data present LabService
+        res.json(labServices);
+    } catch (error) {
+        res.status(500).json({ error: 'Error fetching lab services' });
+    }
+}
+
+exports.createLabService = async (req, res) => {
+    const labServiceData = req.body;
+
+    try {
+        const newLabService = new LabService(labServiceData);
+        await newLabService.save();
+        res.status(201).json(newLabService);
+    } catch (error) {
+        res.status(400).json({ error: 'Error adding lab service' });
+    }
+};
+
+exports.updateLabService = async (req, res) => {
+    const labServiceId = req.params.id;
+    const labServiceData = req.body;
+
+    try {
+        const updatedLabService = await LabService.findByIdAndUpdate(
+            labServiceId,
+            labServiceData,
+            { new: true }
+        );
+        res.json(updatedLabService);
+    } catch (error) {
+        res.status(400).json({ error: 'Error updating lab service' });
+    }
+};
+
+exports.deleteLabService = async (req, res) => {
+    const labServiceId = req.params.id;
+
+    try {
+        await LabService.findByIdAndDelete(labServiceId);
+        res.status(204).end();
+    } catch (error) {
+        res.status(400).json({ error: 'Error deleting lab service' });
+    }
+};
+
+
+
+
+4> create the folder called routes and create one file LabServiceRoute   file 
+
+
+         // LabServiceRoute.js 
+
+
+const express = require('express');
+const router = express.Router();
+const labServiceController = require('../controller/LabServiceController');
+
+// Define routes for lab service CRUD operations
+router.get('/lab-services/', labServiceController.gettingallthelabserviceData);
+router.post('/lab-services/', labServiceController.createLabService);
+router.put('/lab-services/:id', labServiceController.updateLabService);
+router.delete('/lab-services/:id', labServiceController.deleteLabService);
+
+module.exports = router;
+
+
+5> create the file called app.js 
+
+
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require("cors"); // Import the cors package
+const bodyParser = require('body-parser');
+const dotenv = require('dotenv'); // Import dotenv
+dotenv.config({ path: 'Config/.env' }); // Load environment variables from config/.env file
+
+
+const app = express();
+
+app.use(cors()); // Use the cors middleware to enable CORS
+
+
+
+mongoose.connect(process.env.MONGODB_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => {
+  console.log('Connected to MongoDB');
+})
+.catch((error) => {
+  console.error('Error connecting to MongoDB:', error);
+});
+
+ app.use(bodyParser.json());
+
+const labServiceRoutes = require('./routes/LabServiceRoute');
+
+
+
+
+
+app.use(express.json());
+
+app.use('/api', labServiceRoutes);
+
+
+
+
+
+
+const PORT = process.env.PORT || 5000 // Use the PORT environment variable
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
+
+
+
+
+
