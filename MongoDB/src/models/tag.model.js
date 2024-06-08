@@ -6,6 +6,9 @@ const tagSchema=mongoose.Schema({
     section:{type:String, require:true},
 
     
+},{
+    versionKey:false,
+    // timestamps: true
 })
 
  module.exports=mongoose.model("tag",tagSchema);

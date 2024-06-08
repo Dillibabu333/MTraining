@@ -7,6 +7,9 @@ const UserSchema=mongoose.Schema({
     age:{type:Number, require:true},
 
     
+},{
+    versionKey:false,
+    // Timestamp:true
 })
 
  module.exports=mongoose.model("user", UserSchema);

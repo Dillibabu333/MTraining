@@ -1,63 +1,37 @@
-const express =require("express");
+const express = require("express");
 
-const router= express.Router();
+const router = express.Router();
 
-const Post=require("../models/post.model");
+const Post = require("../models/post.model");
 
+const crudcontroller = require("./crudController");
 
-router.post("", async (req, res)=>{
-    try{
-        const user= await Post.create(req.body);
-       return res.status(201).send(user);
-    }
-    catch(e){
-        return res.status(500).send(e.message);
-    }
-})
+router.post("", crudcontroller(Post).post);
 
+router.get("", async (req, res) => {
+  try {
+    const page = req.query.page || 1;
+    const size = req.query.size || 15;
 
-router.get("", async (req, res)=>{
-    try{
-        const user= await Post.find().lean().exec();
-       return res.status(201).send(user);
-    }
-    catch(e){
-        return res.status(500).send(e.message);
-    }
-})
+    const item = await Post.find()
+      .populate({path:"user_id", select:"name"})
+      .populate({path:"tag_id", select:"name"})
+      .skip((page - 1) * size)
+      .limit(size)
+      .lean()
+      .exec();
 
+    const totaldocs = Math.ceil((await Post.find().countDocuments()) / size);
+    return res.status(200).send({ item, totaldocs });
+  } catch (e) {
+    return res.status(500).send(e.message);
+  }
+});
 
-router.get("/:id", async (req, res)=>{
-    try{
-        const user= await Post.findById(req.params.id);
-       return res.status(201).send(user);
-    }
-    catch(e){
-        return res.status(500).send(e.message);
-    }
-})
+router.get("/:id", crudcontroller(Post).getOne);
 
+router.patch("/:id", crudcontroller(Post).updateOne);
 
-router.patch("", async (req, res)=>{
-    try{
-        const user= await Post.findByIdAndUpdate(req.params.id, req.body, {new:true});
-       return res.status(201).send(user);
-    }
-    catch(e){
-        return res.status(500).send(e.message);
-    }
-})
+router.delete("/:id", crudcontroller(Post).deleteOne);
 
-
-router.delete("", async (req, res)=>{
-    try{
-        const user= await Post.findByIdAndDelete(req.body);
-       return res.status(201).send(user);
-    }
-    catch(e){
-        return res.status(500).send(e.message);
-    }
-})
-
-
-module.exports=router
+module.exports = router;

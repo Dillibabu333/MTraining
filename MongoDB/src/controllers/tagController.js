@@ -4,60 +4,22 @@ const router= express.Router();
 
 const Tag=require("../models/tag.model");
 
-
-router.post("", async (req, res)=>{
-    try{
-        const user= await Tag.create(req.body);
-       return res.status(201).send(user);
-    }
-    catch(e){
-        return res.status(500).send(e.message);
-    }
-})
+const crudcontroller=require("./crudController")
 
 
-router.get("", async (req, res)=>{
-    try{
-        const user= await Tag.find().lean().exec();
-       return res.status(201).send(user);
-    }
-    catch(e){
-        return res.status(500).send(e.message);
-    }
-})
+router.post("", crudcontroller(Tag).post )
 
 
-router.get("/:id", async (req, res)=>{
-    try{
-        const user= await Tag.findById(req.params.id);
-       return res.status(201).send(user);
-    }
-    catch(e){
-        return res.status(500).send(e.message);
-    }
-})
+router.get("", crudcontroller(Tag).get)
 
 
-router.patch("", async (req, res)=>{
-    try{
-        const user= await Tag.findByIdAndUpdate(req.params.id, req.body, {new:true});
-       return res.status(201).send(user);
-    }
-    catch(e){
-        return res.status(500).send(e.message);
-    }
-})
+router.get("/:id", crudcontroller(Tag).getOne)
 
 
-router.delete("", async (req, res)=>{
-    try{
-        const user= await Tag.findByIdAndDelete(req.body);
-       return res.status(201).send(user);
-    }
-    catch(e){
-        return res.status(500).send(e.message);
-    }
-})
+router.patch("/:id", crudcontroller(Tag).updateOne)
+
+
+router.delete("/:id", crudcontroller(Tag).deleteOne)
 
 
 module.exports=router
