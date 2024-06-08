@@ -77,7 +77,7 @@ app.delete('/api/lab-services/:id', async (req, res) => {
 
     try {
         await LabService.findByIdAndDelete(labServiceId);
-        res.status(204).end();
+        res.status(204).send();
     } catch (error) {
         res.status(400).json({ error: 'Error deleting lab service' });
     }

@@ -11,8 +11,8 @@ app.use(express.json());
 
 // MongoDB setup using Mongoose
 mongoose.connect('mongodb://localhost:27017/Demoapp', { //mongodb://localhost:27017- mongodb connection string /demoap database name 
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+  // useNewUrlParser: true,
+  // useUnifiedTopology: true,
 });
 
 const db = mongoose.connection;
