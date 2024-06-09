@@ -12,7 +12,6 @@ const get = (model) => async (req, res) => {
     const page = req.query.page || 1;
     const size = req.query.size || 15;
 
-    // const q= {"age":2}
     const item = await model
       .find()
       .skip((page - 1) * size)
